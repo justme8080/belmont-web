@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subagen &amp; tugas latar — Belmont Tools</title>
+<meta name="description" content="Menjalankan beberapa subagen sekaligus di Belmont Tools, membaca indikator tugas latar, dan apa yang terjadi saat berpindah percakapan.">
+<link rel="stylesheet" href="../aset/gaya.css">
+</head>
+<body>
+
+<a class="lewati" href="#isi">Lewati ke isi</a>
+
+<header class="kepala">
+  <div class="bungkus kepala-isi">
+    <a class="merek" href="../index.html">
+      <span class="merek-tanda" aria-hidden="true">B</span>
+      Belmont Tools
+    </a>
+    <nav class="nav">
+      <a href="../index.html#fitur">Fitur</a>
+      <a href="pasang.html" aria-current="page">Panduan</a>
+      <a href="../index.html#unduh">Unduh</a>
+      <a href="https://github.com/sinichi-edogawa/belmont" class="sembunyi-hp">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="bungkus doc" id="isi">
+
+  <aside class="doc-samping">
+    <p class="kecil-huruf">Panduan</p>
+    <ul>
+      <li><a href="pasang.html">Pemasangan</a></li>
+      <li><a href="provider.html">Penyedia &amp; kunci API</a></li>
+      <li><a href="pengaturan.html">Pengaturan</a></li>
+      <li><a href="subagent.html" aria-current="page">Subagen &amp; tugas latar</a></li>
+      <li><a href="telegram.html">Telegram</a></li>
+      <li><a href="bangun.html">Jalankan dari sumber</a></li>
+    </ul>
+  </aside>
+
+  <article class="doc-isi">
+
+    <h1>Subagen &amp; tugas latar</h1>
+    <p class="doc-ringkas">
+      Fitur ini hanya ada pada penyedia <strong>Claude Code</strong>. Agen utama bisa
+      melahirkan agen-agen pembantu yang bekerja bersamaan, masing-masing dengan
+      konteksnya sendiri.
+    </p>
+
+    <h2>Kapan ini berguna</h2>
+    <p>
+      Subagen punya satu keunggulan yang tidak bisa ditiru agen tunggal: mereka bekerja
+      <em>paralel</em>, dan hasil pencarian mereka tidak membanjiri konteks agen utama.
+      Yang kembali ke percakapanmu hanya kesimpulannya.
+    </p>
+    <p>Kasus yang paling cocok:</p>
+    <ul>
+      <li><strong>Menjelajah kode yang belum kamu kenal</strong> — &ldquo;cari di mana autentikasi ditangani, dan terpisah dari itu cari semua tempat yang menulis ke database&rdquo;</li>
+      <li><strong>Audit beberapa sudut sekaligus</strong> — satu subagen memeriksa keamanan, satu memeriksa performa, satu memeriksa penanganan galat</li>
+      <li><strong>Pekerjaan yang saling bebas</strong> — memperbarui dokumentasi di beberapa folder yang tidak bersinggungan</li>
+    </ul>
+    <p>
+      Yang <em>tidak</em> cocok: pekerjaan berurutan yang hasil langkah pertamanya
+      dibutuhkan langkah kedua. Di situ subagen hanya menambah ongkos tanpa mempercepat apa pun.
+    </p>
+
+    <h2>Cara memintanya</h2>
+    <p>
+      Tidak ada tombol. Sebutkan saja dalam permintaanmu bahwa kamu ingin beberapa hal
+      dikerjakan sekaligus — misalnya:
+    </p>
+    <blockquote>
+      <p>
+        Pakai beberapa subagen: satu untuk memeriksa penanganan galat di seluruh
+        <code>src/main</code>, satu untuk memeriksa kebocoran memori, satu untuk
+        memeriksa i18n yang belum diterjemahkan.
+      </p>
+    </blockquote>
+    <p>
+      Agen juga sering memakainya sendiri tanpa diminta ketika sebuah tugas terasa
+      bisa dipecah.
+    </p>
+
+    <h2>Membaca indikatornya</h2>
+    <p>Ada dua tempat yang memberitahumu bahwa pekerjaan latar masih berjalan.</p>
+
+    <div class="petak">
+      <div class="kartu">
+        <h3>Indikator di atas kotak pesan</h3>
+        <p>
+          Menampilkan jumlah subagen yang sedang berjalan di percakapan yang kamu buka.
+          Kalau barisnya hilang, tidak ada lagi yang bekerja.
+        </p>
+      </div>
+      <div class="kartu">
+        <h3>Penanda di sidebar</h3>
+        <p>
+          Menandai percakapan mana yang masih punya pekerjaan latar, jadi kamu tetap tahu
+          meskipun sedang membuka percakapan lain.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      Di kartu Task milik agen utama, langkah-langkah subagen dihitung sebagai angka
+      alih-alih dicetak satu per satu. Tanpa ini, keluaran banyak subagen yang datang
+      bersamaan akan saling menyela dan teksnya tampak terpotong-potong.
+    </p>
+
+    <h2>Berpindah percakapan</h2>
+    <p>
+      Subagen <strong>tetap berjalan</strong> saat kamu membuka percakapan lain. Hasilnya
+      akan ada di percakapan asalnya ketika kamu kembali.
+    </p>
+    <p>
+      Begitu pula menutup dan membuka kembali percakapan: kamu akan melihat kembali
+      daftar tugas latar yang masih hidup.
+    </p>
+
+    <div class="catatan awas">
+      <p class="catatan-judul">Yang membatalkan pekerjaan latar</p>
+      <p>
+        <strong>Menutup aplikasi</strong> mengakhiri semua subagen — mereka proses anak,
+        bukan layanan. Begitu juga tombol <strong>Stop</strong>. Sebelum keluar dari
+        aplikasi, periksa indikatornya.
+      </p>
+    </div>
+
+    <h2>Kalau terasa menggantung</h2>
+    <p>
+      Satu hal yang perlu kamu pahami tentang cara kerjanya: tool yang meluncurkan subagen
+      menjawab <em>seketika</em> dengan &ldquo;agen berhasil diluncurkan&rdquo; — jawaban itu
+      hanya berarti subagennya lahir, bukan bahwa pekerjaannya selesai.
+    </p>
+    <p>
+      Karena itu, jangan memakai munculnya pesan tersebut sebagai tanda selesai.
+      Indikator tugas latar adalah sumber yang benar: selama ia masih tampil, masih ada
+      yang bekerja.
+    </p>
+    <p>
+      Kalau indikatornya tidak kunjung hilang padahal sudah lama sunyi, tekan
+      <strong>Stop</strong> lalu kirim permintaanmu lagi — lebih baik daripada menebak-nebak.
+    </p>
+
+    <h2>Soal biaya</h2>
+    <p>
+      Tiga subagen berarti kira-kira tiga kali pemakaian token untuk porsi penjelajahan itu.
+      Mereka menghemat <em>waktumu</em> dan menjaga konteks agen utama tetap bersih, bukan
+      menghemat token. Pakai saat percabangan pekerjaannya nyata.
+    </p>
+
+    <nav class="lanjut">
+      <a href="pengaturan.html"><span>Sebelumnya</span>← Pengaturan</a>
+      <a href="telegram.html"><span>Berikutnya</span>Telegram →</a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="kaki">
+  <div class="bungkus kaki-isi">
+    <span>Belmont Tools · lisensi MIT</span>
+    <a href="https://github.com/sinichi-edogawa/belmont">Repo &amp; rilis</a>
+    <span class="kanan">Dibuat oleh Agus Zaky</span>
+  </div>
+</footer>
+
+</body>
+</html>

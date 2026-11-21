@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pemasangan — Belmont Tools</title>
+<meta name="description" content="Cara mengunduh dan memasang Belmont Tools di Windows, melewati peringatan SmartScreen, dan mengatur folder kerja pertama.">
+<link rel="stylesheet" href="../aset/gaya.css">
+</head>
+<body>
+
+<a class="lewati" href="#isi">Lewati ke isi</a>
+
+<header class="kepala">
+  <div class="bungkus kepala-isi">
+    <a class="merek" href="../index.html">
+      <span class="merek-tanda" aria-hidden="true">B</span>
+      Belmont Tools
+    </a>
+    <nav class="nav">
+      <a href="../index.html#fitur">Fitur</a>
+      <a href="pasang.html" aria-current="page">Panduan</a>
+      <a href="../index.html#unduh">Unduh</a>
+      <a href="https://github.com/sinichi-edogawa/belmont" class="sembunyi-hp">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="bungkus doc" id="isi">
+
+  <aside class="doc-samping">
+    <p class="kecil-huruf">Panduan</p>
+    <ul>
+      <li><a href="pasang.html" aria-current="page">Pemasangan</a></li>
+      <li><a href="provider.html">Penyedia &amp; kunci API</a></li>
+      <li><a href="pengaturan.html">Pengaturan</a></li>
+      <li><a href="subagent.html">Subagen &amp; tugas latar</a></li>
+      <li><a href="telegram.html">Telegram</a></li>
+      <li><a href="bangun.html">Jalankan dari sumber</a></li>
+    </ul>
+  </aside>
+
+  <article class="doc-isi">
+
+    <h1>Pemasangan</h1>
+    <p class="doc-ringkas">
+      Windows 10 atau 11, 64-bit. Tidak perlu memasang Node.js, Python, atau apa pun lainnya —
+      semuanya sudah ada di dalam berkas installer.
+    </p>
+
+    <ol class="langkah">
+      <li>
+        <h3>Pilih installer atau portable</h3>
+        <p>
+          <a href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Setup.exe"><strong>Belmont-Tools-Setup.exe</strong></a>
+          memasang aplikasi ke folder pilihanmu dan membuat shortcut di desktop serta start menu.
+          Ini yang disarankan karena memperbarui versi nanti cukup menjalankan installer baru.
+        </p>
+        <p>
+          <a href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Portable.exe"><strong>Belmont-Tools-Portable.exe</strong></a>
+          langsung jalan tanpa dipasang. Berguna untuk mencoba dulu. Perlu diingat:
+          pengaturannya tetap ditulis ke <code>%APPDATA%</code>, jadi &ldquo;portable&rdquo; di sini
+          berarti aplikasinya tidak dipasang — bukan bahwa ia tidak meninggalkan jejak.
+        </p>
+      </li>
+
+      <li>
+        <h3>Lewati peringatan SmartScreen</h3>
+        <p>
+          Windows akan menampilkan <em>&ldquo;Windows protected your PC&rdquo;</em>.
+          Klik <strong>More info</strong>, lalu <strong>Run anyway</strong>.
+        </p>
+        <div class="catatan">
+          <p class="catatan-judul">Kenapa ini muncul</p>
+          <p>
+            Berkasnya tidak ditandatangani dengan sertifikat penandatanganan kode, dan sertifikat
+            semacam itu berbayar. Peringatan ini tentang <em>ketidaktahuan</em> Windows soal
+            siapa penerbitnya, bukan tentang isi berkasnya. Kalau kamu ingin memastikan sendiri,
+            seluruh kode sumbernya bisa dibaca dan kamu bisa
+            <a href="bangun.html">membangun installer sendiri</a>.
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <h3>Jalankan dan pilih penyedia AI</h3>
+        <p>
+          Saat pertama dibuka, aplikasi belum bisa apa-apa sampai kamu memberinya cara
+          menghubungi model AI. Buka <strong>Settings</strong> lalu pilih penyedia.
+        </p>
+        <p>
+          Bawaannya adalah <strong>Claude Code</strong>, yang memakai login akun Claude
+          alih-alih kunci API. Kalau kamu lebih suka penyedia lain, siapkan kunci API-nya.
+          <a href="provider.html">Rinciannya di halaman berikutnya →</a>
+        </p>
+      </li>
+
+      <li>
+        <h3>Tentukan folder kerja</h3>
+        <p>
+          Ini bagian terpenting. Folder kerja adalah satu-satunya tempat agen boleh membaca
+          dan menulis berkas — percobaan menyentuh apa pun di luarnya akan ditolak.
+        </p>
+        <p>
+          Bawaannya adalah Desktop-mu. Saya sarankan menggantinya ke folder proyek yang
+          spesifik, bukan Desktop atau <code>C:\</code>, supaya ruang geraknya sesempit
+          yang dibutuhkan.
+        </p>
+      </li>
+
+      <li>
+        <h3>Periksa mode izin</h3>
+        <p>
+          Di dekat kotak pesan ada pemilih mode izin dengan tiga pilihan:
+        </p>
+        <table>
+          <thead><tr><th>Mode</th><th>Artinya</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Supervised</strong></td><td>Bawaan. Setiap penulisan berkas dan perintah shell meminta persetujuanmu.</td></tr>
+            <tr><td><strong>Accept edits</strong></td><td>Suntingan berkas langsung jalan; perintah shell masih bertanya.</td></tr>
+            <tr><td><strong>Full</strong></td><td>Tidak bertanya apa pun lagi.</td></tr>
+          </tbody>
+        </table>
+        <p>
+          Tetap di <strong>Supervised</strong> sampai kamu paham kebiasaan agennya.
+        </p>
+      </li>
+    </ol>
+
+    <h2>Di mana datamu disimpan</h2>
+    <p>
+      Semuanya lokal, dalam satu folder:
+    </p>
+    <pre><code>%APPDATA%\belmont-tools\
+├── settings.json          ← pengaturan dan kunci API
+└── sessions\
+    └── &lt;id&gt;.json          ← satu berkas per percakapan</code></pre>
+    <p>
+      Tempel <code>%APPDATA%\belmont-tools</code> ke bilah alamat File Explorer untuk membukanya.
+      Folder ini tidak tersentuh saat kamu memasang versi baru — jadi memperbarui aplikasi
+      tidak menghapus percakapan atau pengaturanmu.
+    </p>
+
+    <div class="catatan awas">
+      <p class="catatan-judul">Kunci API disimpan apa adanya</p>
+      <p>
+        <code>settings.json</code> menyimpan kunci API sebagai teks biasa, tidak terenkripsi.
+        Siapa pun yang bisa membaca berkas di akun Windows-mu bisa membacanya. Jangan
+        membagikan berkas itu, dan jangan menaruhnya di folder yang tersinkron ke cloud.
+      </p>
+    </div>
+
+    <h2>Menghapus aplikasi</h2>
+    <p>
+      Lewat <strong>Settings &rsaquo; Apps</strong> Windows, cari &ldquo;Belmont Tools&rdquo;,
+      lalu Uninstall. Itu menghapus aplikasinya tapi <em>tidak</em> menghapus
+      <code>%APPDATA%\belmont-tools</code> — hapus folder itu manual kalau kamu ingin
+      membuang pengaturan dan riwayat percakapan juga.
+    </p>
+
+    <nav class="lanjut">
+      <span></span>
+      <a href="provider.html"><span>Berikutnya</span>Penyedia &amp; kunci API →</a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="kaki">
+  <div class="bungkus kaki-isi">
+    <span>Belmont Tools · lisensi MIT</span>
+    <a href="https://github.com/sinichi-edogawa/belmont">Repo &amp; rilis</a>
+    <span class="kanan">Dibuat oleh Agus Zaky</span>
+  </div>
+</footer>
+
+</body>
+</html>

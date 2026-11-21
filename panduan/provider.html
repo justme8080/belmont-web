@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penyedia &amp; kunci API — Belmont Tools</title>
+<meta name="description" content="Memilih penyedia AI di Belmont Tools: login akun Claude, kunci API Anthropic, OpenAI, Gemini, DeepSeek, Kimi, GLM, ONToken, atau endpoint OpenAI-compatible sendiri.">
+<link rel="stylesheet" href="../aset/gaya.css">
+</head>
+<body>
+
+<a class="lewati" href="#isi">Lewati ke isi</a>
+
+<header class="kepala">
+  <div class="bungkus kepala-isi">
+    <a class="merek" href="../index.html">
+      <span class="merek-tanda" aria-hidden="true">B</span>
+      Belmont Tools
+    </a>
+    <nav class="nav">
+      <a href="../index.html#fitur">Fitur</a>
+      <a href="pasang.html" aria-current="page">Panduan</a>
+      <a href="../index.html#unduh">Unduh</a>
+      <a href="https://github.com/sinichi-edogawa/belmont" class="sembunyi-hp">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="bungkus doc" id="isi">
+
+  <aside class="doc-samping">
+    <p class="kecil-huruf">Panduan</p>
+    <ul>
+      <li><a href="pasang.html">Pemasangan</a></li>
+      <li><a href="provider.html" aria-current="page">Penyedia &amp; kunci API</a></li>
+      <li><a href="pengaturan.html">Pengaturan</a></li>
+      <li><a href="subagent.html">Subagen &amp; tugas latar</a></li>
+      <li><a href="telegram.html">Telegram</a></li>
+      <li><a href="bangun.html">Jalankan dari sumber</a></li>
+    </ul>
+  </aside>
+
+  <article class="doc-isi">
+
+    <h1>Penyedia &amp; kunci API</h1>
+    <p class="doc-ringkas">
+      Belmont Tools tidak punya model sendiri dan tidak menjual kuota. Ia menyambung ke
+      penyedia yang kamu pilih, dengan akun atau kunci milikmu sendiri.
+    </p>
+
+    <h2>Dua jenis penyambungan</h2>
+    <p>
+      Pilihannya terbagi dua, dan perbedaannya penting karena menentukan fitur apa yang kamu dapat.
+    </p>
+
+    <div class="petak">
+      <div class="kartu">
+        <h3>Claude Code</h3>
+        <p>
+          Memakai login akun Claude, bukan kunci API. Agennya mengendalikan dirinya sendiri
+          dengan tool bawaan Claude Code, dan ini satu-satunya pilihan yang mendukung
+          <strong>subagen paralel</strong> serta pengatur <strong>tingkat usaha</strong>.
+        </p>
+      </div>
+      <div class="kartu">
+        <h3>Penyedia API</h3>
+        <p>
+          Anthropic, OpenAI, Gemini, DeepSeek, Kimi, GLM, ONToken, atau endpoint custom.
+          Perlu kunci API. Agennya memakai tool milik Belmont Tools dan punya
+          <strong>peringkasan otomatis</strong> saat konteks menipis.
+        </p>
+      </div>
+    </div>
+
+    <h2>Login akun Claude</h2>
+    <ol class="langkah">
+      <li>
+        <h3>Pilih Claude Code sebagai penyedia</h3>
+        <p>Buka <strong>Settings</strong>, lalu pilih <strong>Claude Code</strong> di daftar penyedia. Ini sudah jadi bawaan.</p>
+      </li>
+      <li>
+        <h3>Buka panel Akun Claude</h3>
+        <p>Di bawah pemilih penyedia ada panel <strong>Akun Claude</strong>. Mulai proses login dari situ.</p>
+      </li>
+      <li>
+        <h3>Tempel kode OAuth</h3>
+        <p>
+          Peramban akan terbuka untuk kamu masuk ke akun Claude. Setelah selesai, kamu
+          mendapat kode — tempel kembali ke panel itu.
+        </p>
+      </li>
+    </ol>
+
+    <div class="catatan">
+      <p class="catatan-judul">Variabel environment Anthropic diabaikan dengan sengaja</p>
+      <p>
+        Kalau komputermu punya <code>ANTHROPIC_API_KEY</code>, <code>ANTHROPIC_BASE_URL</code>,
+        <code>ANTHROPIC_MODEL</code>, atau saudara-saudaranya, Belmont Tools
+        <strong>membuangnya</strong> dari lingkungan proses Claude Code. Tujuannya supaya
+        sesi di aplikasi ini selalu memakai akun dan model yang kamu pilih di Settings,
+        bukan diam-diam dibelokkan oleh variabel sistem. Kalau kamu memang ingin memakai
+        kunci API Anthropic, pilih penyedia <strong>Claude (Anthropic)</strong> dan isi kuncinya di Settings.
+      </p>
+    </div>
+
+    <h2>Mengisi kunci API</h2>
+    <ol class="langkah">
+      <li>
+        <h3>Pilih penyedianya lebih dulu</h3>
+        <p>
+          Kolom kunci API hanya menampilkan satu kunci: milik penyedia yang sedang terpilih.
+          Kunci penyedia lain tetap tersimpan, tidak hilang saat kamu berpindah.
+        </p>
+      </li>
+      <li>
+        <h3>Tempel kunci dari dasbor penyedia</h3>
+        <p>Ambil dari halaman API key penyedia bersangkutan:</p>
+        <table>
+          <thead><tr><th>Penyedia</th><th>Alamat layanan</th></tr></thead>
+          <tbody>
+            <tr><td>Claude (Anthropic)</td><td><code>console.anthropic.com</code></td></tr>
+            <tr><td>OpenAI</td><td><code>platform.openai.com</code></td></tr>
+            <tr><td>Gemini</td><td><code>aistudio.google.com</code></td></tr>
+            <tr><td>DeepSeek</td><td><code>platform.deepseek.com</code></td></tr>
+            <tr><td>Kimi (Moonshot)</td><td><code>platform.moonshot.ai</code></td></tr>
+            <tr><td>GLM (Zhipu / Z.ai)</td><td><code>z.ai</code></td></tr>
+            <tr><td>ONToken.id</td><td><code>ontoken.id</code></td></tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <h3>Tekan Muat ulang di kolom model</h3>
+        <p>
+          Aplikasi membawa daftar model bawaan sebagai cadangan, tapi daftar itu cepat basi.
+          Tombol <strong>Muat ulang</strong> menarik daftar sesungguhnya dari penyedia, jadi
+          model yang baru dirilis langsung muncul tanpa menunggu pembaruan aplikasi.
+        </p>
+        <p>
+          Kalau tombol itu gagal, biasanya kuncinya salah atau salah tempat — ini cara
+          tercepat memastikan kuncimu benar-benar bekerja.
+        </p>
+      </li>
+    </ol>
+
+    <h2>Endpoint custom</h2>
+    <p>
+      Layanan apa pun yang meniru format OpenAI bisa dipakai — OpenRouter, Groq, Together,
+      vLLM atau Ollama yang kamu jalankan sendiri. Tambahkan dari form endpoint custom
+      di Settings dengan dua hal: <strong>base URL</strong> dan <strong>nama</strong>.
+    </p>
+    <p>
+      Kuncinya opsional, karena server lokal biasanya tidak memerlukannya.
+      Base URL yang dimaksud adalah bagian sebelum <code>/chat/completions</code> —
+      misalnya <code>http://localhost:11434/v1</code>.
+    </p>
+
+    <h2>Mana yang sebaiknya dipakai</h2>
+    <p>
+      Untuk pekerjaan ngoding sungguhan, <strong>Claude Code</strong> yang paling kuat di
+      aplikasi ini: subagen paralel membuatnya bisa menelusuri banyak hal sekaligus,
+      dan tool bawaannya lebih matang.
+    </p>
+    <p>
+      Penyedia API lebih cocok kalau kamu sudah punya kuota di sana, butuh model
+      tertentu, atau ingin biaya yang lebih bisa diprediksi. Untuk percakapan panjang
+      dengan penyedia API, lihat
+      <a href="pengaturan.html#ambangringkas">ambang peringkasan otomatis</a> —
+      inilah yang mencegah percakapan mati saat konteks penuh.
+    </p>
+
+    <div class="catatan awas">
+      <p class="catatan-judul">Tagihan tetap tanggung jawabmu</p>
+      <p>
+        Agen bisa memanggil model berkali-kali dalam satu giliran, dan subagen
+        mengalikannya lagi. Pantau penggunaan di dasbor penyedia pada minggu-minggu
+        pertama sampai kamu punya gambaran biayanya.
+      </p>
+    </div>
+
+    <nav class="lanjut">
+      <a href="pasang.html"><span>Sebelumnya</span>← Pemasangan</a>
+      <a href="pengaturan.html"><span>Berikutnya</span>Pengaturan →</a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="kaki">
+  <div class="bungkus kaki-isi">
+    <span>Belmont Tools · lisensi MIT</span>
+    <a href="https://github.com/sinichi-edogawa/belmont">Repo &amp; rilis</a>
+    <span class="kanan">Dibuat oleh Agus Zaky</span>
+  </div>
+</footer>
+
+</body>
+</html>

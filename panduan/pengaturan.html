@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pengaturan — Belmont Tools</title>
+<meta name="description" content="Setiap opsi pengaturan Belmont Tools dijelaskan: folder kerja, mode izin, tingkat usaha, tema, bahasa, MCP, dan opsi yang hanya bisa diubah dari settings.json.">
+<link rel="stylesheet" href="../aset/gaya.css">
+</head>
+<body>
+
+<a class="lewati" href="#isi">Lewati ke isi</a>
+
+<header class="kepala">
+  <div class="bungkus kepala-isi">
+    <a class="merek" href="../index.html">
+      <span class="merek-tanda" aria-hidden="true">B</span>
+      Belmont Tools
+    </a>
+    <nav class="nav">
+      <a href="../index.html#fitur">Fitur</a>
+      <a href="pasang.html" aria-current="page">Panduan</a>
+      <a href="../index.html#unduh">Unduh</a>
+      <a href="https://github.com/sinichi-edogawa/belmont" class="sembunyi-hp">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="bungkus doc" id="isi">
+
+  <aside class="doc-samping">
+    <p class="kecil-huruf">Panduan</p>
+    <ul>
+      <li><a href="pasang.html">Pemasangan</a></li>
+      <li><a href="provider.html">Penyedia &amp; kunci API</a></li>
+      <li><a href="pengaturan.html" aria-current="page">Pengaturan</a></li>
+      <li><a href="subagent.html">Subagen &amp; tugas latar</a></li>
+      <li><a href="telegram.html">Telegram</a></li>
+      <li><a href="bangun.html">Jalankan dari sumber</a></li>
+    </ul>
+  </aside>
+
+  <article class="doc-isi">
+
+    <h1>Pengaturan</h1>
+    <p class="doc-ringkas">
+      Semuanya tersimpan di <code>%APPDATA%\belmont-tools\settings.json</code>.
+      Sebagian besar bisa diubah dari panel Settings; beberapa hanya ada di berkas.
+    </p>
+
+    <h2>Folder kerja</h2>
+    <p>
+      Batas gerak agen. Setiap path yang diminta agen diselesaikan relatif terhadap folder
+      ini, dan kalau hasilnya keluar dari folder tersebut, permintaannya ditolak — bukan
+      ditanyakan, langsung ditolak.
+    </p>
+    <p>
+      Bawaannya Desktop. Ganti ke folder proyek yang spesifik.
+    </p>
+    <div class="catatan awas">
+      <p class="catatan-judul">Satu pengecualian penting</p>
+      <p>
+        Batas folder kerja <strong>tidak berlaku untuk server MCP</strong>. Server MCP adalah
+        program terpisah yang kamu sendiri daftarkan, dan Belmont Tools tidak bisa mengekang
+        apa yang mereka sentuh. Perlakukan setiap server MCP seperti program biasa yang kamu
+        pasang: hanya tambahkan yang kamu percayai.
+      </p>
+    </div>
+
+    <h2>Mode izin</h2>
+    <p>Letaknya di dekat kotak pesan, bukan di panel Settings, karena sering diganti.</p>
+    <table>
+      <thead><tr><th>Mode</th><th>Tulis / sunting berkas</th><th>Perintah shell</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Supervised</strong> <em>(bawaan)</em></td><td>Minta persetujuan</td><td>Minta persetujuan</td></tr>
+        <tr><td><strong>Accept edits</strong></td><td>Langsung jalan</td><td>Minta persetujuan</td></tr>
+        <tr><td><strong>Full</strong></td><td>Langsung jalan</td><td>Langsung jalan</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Membaca berkas, mendaftar isi folder, mencari web, dan mengambil halaman
+      <em>tidak pernah</em> meminta persetujuan di mode mana pun — semuanya hanya membaca.
+    </p>
+
+    <h2>Tingkat usaha</h2>
+    <p>
+      Hanya berlaku untuk <strong>Claude Code</strong>. Lima tingkat:
+      <code>low</code>, <code>medium</code> (bawaan), <code>high</code>, <code>xhigh</code>, <code>max</code>.
+    </p>
+    <p>
+      Makin tinggi, makin lama agen berpikir sebelum bertindak — dan makin besar biayanya.
+      <code>medium</code> cukup untuk hampir semua hal; naikkan untuk masalah yang butuh
+      penalaran berlapis, turunkan untuk tugas mekanis.
+    </p>
+
+    <h2>System prompt</h2>
+    <p>
+      Instruksi yang selalu ikut di setiap percakapan. Bawaannya tiga kalimat dalam bahasa
+      Inggris. Di sinilah tempatnya menulis hal seperti &ldquo;selalu jawab dalam bahasa
+      Indonesia&rdquo;, konvensi kode proyekmu, atau larangan tertentu.
+    </p>
+
+    <h2>Tampilan</h2>
+    <p>Sembilan tema. Hanya satu yang terang:</p>
+    <p>
+      <code>catppuccin</code> (bawaan) · <code>tokyo-night</code> · <code>rose-pine</code> ·
+      <code>nord</code> · <code>gruvbox</code> · <code>dracula</code> · <code>one-dark</code> ·
+      <code>obsidian</code> · <code>terang</code>
+    </p>
+    <p>
+      Bahasa antarmuka tersedia dalam <strong>Bahasa Indonesia</strong> dan
+      <strong>English</strong>, bawaannya English.
+    </p>
+
+    <h2>Pencarian web</h2>
+    <p>
+      Tanpa kunci apa pun, pencarian web memakai DuckDuckGo. Kalau kamu mengisi
+      <strong>kunci Tavily</strong>, pencarian beralih ke Tavily yang hasilnya lebih
+      rapi dan dirancang untuk dibaca model. Tavily punya kuota gratis bulanan.
+    </p>
+
+    <h2>Konteks ringkas</h2>
+    <p>
+      Opsi <strong>lean context</strong> memperkecil jumlah informasi yang dikirim ke model
+      setiap giliran. Menghemat biaya dan memperlambat penuhnya konteks, dengan imbalan
+      agen mengingat lebih sedikit detail. Bawaannya mati.
+    </p>
+
+    <h2>Server MCP</h2>
+    <p>
+      Model Context Protocol adalah cara standar menambahkan tool baru ke agen. Belmont Tools
+      menjalankan server MCP sebagai proses anak lewat stdio.
+    </p>
+    <p>
+      Kamu bisa menambahkannya satu per satu, atau <strong>mengimpor JSON</strong> konfigurasi
+      yang sudah kamu punya dari aplikasi lain. Saat memakai Claude Code, tool dari MCP muncul
+      dengan nama berpola <code>mcp__&lt;server&gt;__&lt;tool&gt;</code>.
+    </p>
+
+    <hr>
+
+    <h2 id="tersembunyi">Opsi yang hanya ada di berkas</h2>
+    <p>
+      Tiga opsi ini nyata dan berpengaruh, tapi belum punya kolom di panel Settings.
+      Untuk mengubahnya: <strong>tutup aplikasi dulu</strong>, sunting
+      <code>%APPDATA%\belmont-tools\settings.json</code> dengan Notepad, lalu buka kembali.
+      Kalau aplikasi masih jalan, perubahanmu akan tertimpa saat ia menyimpan.
+    </p>
+
+    <h3 id="ambangringkas"><code>ambangRingkas</code> — ambang peringkasan otomatis</h3>
+    <p>
+      Bawaannya <code>80</code>, artinya saat konteks mencapai 80% penuh, percakapan
+      diringkas otomatis supaya bisa terus berjalan. Isi <code>0</code> untuk mematikannya.
+    </p>
+    <p>
+      Ini yang mencegah percakapan panjang berhenti mendadak di tengah jalan pada penyedia API.
+      Turunkan ke <code>70</code> kalau kamu masih kena mentok; naikkan ke <code>90</code>
+      kalau kamu lebih mementingkan ingatan utuh daripada kelancaran.
+    </p>
+    <div class="catatan">
+      <p class="catatan-judul">Satu syarat</p>
+      <p>
+        Peringkasan otomatis hanya aktif kalau ukuran jendela konteks model itu diketahui
+        aplikasi. Untuk model yang sangat baru atau endpoint custom, ukurannya kadang tidak
+        diketahui — dan dalam kasus itu peringkasan tidak dijalankan sama sekali, karena
+        menebak ambang akan lebih berbahaya daripada tidak bertindak.
+      </p>
+      <p>
+        Claude Code tidak memakai opsi ini; ia punya mekanisme <code>/compact</code> sendiri.
+        Tombol <strong>Compact</strong> di antarmuka bekerja untuk keduanya, kapan saja.
+      </p>
+    </div>
+
+    <h3><code>maxSteps</code> — batas langkah per giliran</h3>
+    <p>
+      Bawaannya <code>40</code>. Berapa kali agen boleh memanggil tool dalam satu giliran
+      sebelum dipaksa berhenti. Ini jaring pengaman terhadap agen yang berputar-putar
+      tanpa kemajuan.
+    </p>
+    <p>
+      Naikkan kalau tugasmu memang panjang dan sering terpotong di tengah; turunkan kalau
+      kamu ingin dipanggil lebih sering untuk mengarahkan.
+    </p>
+
+    <h3><code>windowBounds</code> — posisi jendela</h3>
+    <p>
+      Internal, diisi sendiri oleh aplikasi untuk mengingat ukuran dan posisi jendela.
+      Tidak perlu disentuh. Kalau jendelanya pernah terbuka di luar layar, hapus nilai ini
+      agar kembali ke posisi awal.
+    </p>
+
+    <div class="catatan bahaya">
+      <p class="catatan-judul">Cadangkan sebelum menyunting</p>
+      <p>
+        <code>settings.json</code> harus tetap JSON yang sah. Satu koma yang salah bisa
+        membuat pengaturanmu gagal dibaca. Salin dulu berkasnya ke tempat lain sebelum
+        mengubah apa pun.
+      </p>
+    </div>
+
+    <nav class="lanjut">
+      <a href="provider.html"><span>Sebelumnya</span>← Penyedia &amp; kunci API</a>
+      <a href="subagent.html"><span>Berikutnya</span>Subagen &amp; tugas latar →</a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="kaki">
+  <div class="bungkus kaki-isi">
+    <span>Belmont Tools · lisensi MIT</span>
+    <a href="https://github.com/sinichi-edogawa/belmont">Repo &amp; rilis</a>
+    <span class="kanan">Dibuat oleh Agus Zaky</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegram — Belmont Tools</title>
+<meta name="description" content="Mengendalikan agen Belmont Tools dari Telegram: membuat bot, mengisi token dan chat ID, daftar perintah, serta batasan dan risikonya.">
+<link rel="stylesheet" href="../aset/gaya.css">
+</head>
+<body>
+
+<a class="lewati" href="#isi">Lewati ke isi</a>
+
+<header class="kepala">
+  <div class="bungkus kepala-isi">
+    <a class="merek" href="../index.html">
+      <span class="merek-tanda" aria-hidden="true">B</span>
+      Belmont Tools
+    </a>
+    <nav class="nav">
+      <a href="../index.html#fitur">Fitur</a>
+      <a href="pasang.html" aria-current="page">Panduan</a>
+      <a href="../index.html#unduh">Unduh</a>
+      <a href="https://github.com/sinichi-edogawa/belmont" class="sembunyi-hp">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="bungkus doc" id="isi">
+
+  <aside class="doc-samping">
+    <p class="kecil-huruf">Panduan</p>
+    <ul>
+      <li><a href="pasang.html">Pemasangan</a></li>
+      <li><a href="provider.html">Penyedia &amp; kunci API</a></li>
+      <li><a href="pengaturan.html">Pengaturan</a></li>
+      <li><a href="subagent.html">Subagen &amp; tugas latar</a></li>
+      <li><a href="telegram.html" aria-current="page">Telegram</a></li>
+      <li><a href="bangun.html">Jalankan dari sumber</a></li>
+    </ul>
+  </aside>
+
+  <article class="doc-isi">
+
+    <h1>Telegram</h1>
+    <p class="doc-ringkas">
+      Lanjutkan percakapan dari HP sementara komputermu tetap menyala. Agen tetap berjalan
+      di komputer — Telegram hanya jadi jendelanya.
+    </p>
+
+    <div class="catatan bahaya">
+      <p class="catatan-judul">Pahami ini sebelum mengaktifkan</p>
+      <p>
+        Siapa pun yang bisa mengirim pesan sebagai chat yang kamu izinkan, bisa menyuruh
+        agen menjalankan perintah di komputermu. Satu-satunya pagar yang memisahkan
+        &ldquo;bot pribadiku&rdquo; dari &ldquo;siapa pun boleh menjalankan perintah di PC-ku&rdquo;
+        adalah daftar putih satu chat ID itu.
+      </p>
+      <p>
+        Jaga token bot seperti kata sandi, dan jangan menaruh bot ini di grup.
+      </p>
+    </div>
+
+    <h2>Menyiapkannya</h2>
+    <ol class="langkah">
+      <li>
+        <h3>Buat bot lewat BotFather</h3>
+        <p>
+          Di Telegram, cari <strong>@BotFather</strong>, kirim <code>/newbot</code>, lalu
+          ikuti pertanyaannya. Di akhir kamu diberi <strong>token</strong> berbentuk seperti
+          <code>123456789:AAE…</code>. Salin itu.
+        </p>
+      </li>
+      <li>
+        <h3>Tempel token ke Settings</h3>
+        <p>
+          Buka panel <strong>Telegram</strong> di Settings Belmont Tools dan tempel tokennya
+          ke kolom token bot.
+        </p>
+      </li>
+      <li>
+        <h3>Kirim satu pesan ke botmu</h3>
+        <p>
+          Buka percakapan dengan bot barumu dan kirim apa saja, misalnya
+          <code>/start</code>. Ini perlu supaya botmu tahu kamu ada — bot Telegram tidak
+          bisa memulai percakapan lebih dulu.
+        </p>
+      </li>
+      <li>
+        <h3>Tekan Deteksi untuk mengisi chat ID</h3>
+        <p>
+          Tombol <strong>Deteksi</strong> membaca pesan terakhir yang masuk ke bot dan
+          mengisi chat ID-nya otomatis. Kalau gagal, berarti langkah sebelumnya belum
+          benar-benar terkirim.
+        </p>
+        <p>
+          Lalu tekan <strong>Tes kirim</strong> — kalau pesan uji masuk ke HP-mu,
+          penyiapannya beres.
+        </p>
+      </li>
+      <li>
+        <h3>Nyalakan</h3>
+        <p>
+          Centang <strong>aktifkan</strong> agar jembatannya otomatis menyala setiap
+          aplikasi dibuka. Token dan chat ID dua-duanya wajib ada; kalau salah satu
+          kosong, jembatannya menolak jalan.
+        </p>
+        <p>
+          Ada juga opsi <strong>notifikasi desktop</strong> — kalau dinyalakan, hasil
+          giliran yang kamu mulai dari komputer ikut dikirim ke Telegram. Bawaannya mati,
+          supaya HP-mu tidak berbunyi untuk sesuatu yang sedang kamu lihat langsung.
+        </p>
+      </li>
+    </ol>
+
+    <h2>Perintah yang tersedia</h2>
+    <table>
+      <thead><tr><th>Perintah</th><th>Fungsinya</th></tr></thead>
+      <tbody>
+        <tr><td><code>/proyek</code></td><td>Daftar proyek. Tambahkan nomornya untuk berpindah, mis. <code>/proyek 2</code></td></tr>
+        <tr><td><code>/status</code></td><td>Proyek aktif, model, mode izin, sisa konteks, dan status tugas latar</td></tr>
+        <tr><td><code>/ringkas</code></td><td>Meringkas percakapan. Ditolak kalau agen sedang bekerja</td></tr>
+        <tr><td><code>/stop</code></td><td>Menghentikan giliran yang sedang berjalan</td></tr>
+        <tr><td><code>/bantuan</code></td><td>Daftar perintah</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Versi Inggrisnya juga bekerja: <code>/projects</code>, <code>/compact</code>,
+      <code>/help</code>, <code>/start</code>.
+    </p>
+    <p>
+      Teks lain apa pun dikirim ke agen sebagai pesan biasa. Kalau agen sedang sibuk,
+      pesanmu diantrekan dan dijalankan setelah giliran sekarang selesai.
+    </p>
+
+    <h2>Menyetujui tool dari HP</h2>
+    <p>
+      Saat agen minta izin menulis berkas atau menjalankan perintah shell, persetujuannya
+      datang ke Telegram sebagai tombol — jadi mode <strong>Supervised</strong> tetap bisa
+      dipakai saat kamu jauh dari komputer.
+    </p>
+    <p>
+      Tombolnya bisa kedaluwarsa kalau terlalu lama dibiarkan. Kalau itu terjadi, kirim
+      ulang permintaanmu.
+    </p>
+
+    <h2>Yang tidak bisa dilakukan dari Telegram</h2>
+    <table>
+      <thead><tr><th>Batasan</th><th>Keterangan</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Hanya teks</td>
+          <td>Foto dan dokumen yang kamu kirim <strong>diabaikan tanpa pemberitahuan</strong> — termasuk caption yang menyertainya. Kirim lampiran dari desktop.</td>
+        </tr>
+        <tr>
+          <td>Pertanyaan pilihan</td>
+          <td>Kalau agen mengajukan pertanyaan berpilihan, kamu diminta membukanya di desktop untuk memilih.</td>
+        </tr>
+        <tr>
+          <td>Tanpa format</td>
+          <td>Pesan dikirim sebagai teks polos, tanpa Markdown. Blok kode tampil apa adanya.</td>
+        </tr>
+        <tr>
+          <td>Dipecah di ~3.800 karakter</td>
+          <td>Jawaban panjang datang sebagai beberapa pesan berurutan, karena batas Telegram sendiri.</td>
+        </tr>
+        <tr>
+          <td>Satu chat saja</td>
+          <td>Pesan dari chat lain diabaikan sepenuhnya.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Soal jaringan</h2>
+    <p>
+      Belmont Tools <strong>tidak membuka port</strong> apa pun dan tidak butuh tunnel atau
+      IP publik. Ia hanya menghubungi server Telegram keluar, lalu menunggu balasan
+      selama kurang-lebih 25 detik, lalu menghubungi lagi. Karena itu ia bekerja di
+      belakang router rumah atau Wi-Fi kantor tanpa pengaturan tambahan.
+    </p>
+    <p>
+      Antrean pesan lama dibuang saat jembatan dinyalakan, jadi &ldquo;halo&rdquo; yang kamu
+      kirim semalam tidak tiba-tiba dieksekusi pagi ini.
+    </p>
+    <p>
+      Kalau koneksinya terputus, ia menunggu beberapa detik dan mencoba lagi sendiri.
+    </p>
+
+    <nav class="lanjut">
+      <a href="subagent.html"><span>Sebelumnya</span>← Subagen &amp; tugas latar</a>
+      <a href="bangun.html"><span>Berikutnya</span>Jalankan dari sumber →</a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="kaki">
+  <div class="bungkus kaki-isi">
+    <span>Belmont Tools · lisensi MIT</span>
+    <a href="https://github.com/sinichi-edogawa/belmont">Repo &amp; rilis</a>
+    <span class="kanan">Dibuat oleh Agus Zaky</span>
+  </div>
+</footer>
+
+</body>
+</html>

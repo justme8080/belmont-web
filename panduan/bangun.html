@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jalankan dari sumber — Belmont Tools</title>
+<meta name="description" content="Menjalankan Belmont Tools dari kode sumber dengan Electron, dan membangun installer Windows sendiri dengan electron-builder.">
+<link rel="stylesheet" href="../aset/gaya.css">
+</head>
+<body>
+
+<a class="lewati" href="#isi">Lewati ke isi</a>
+
+<header class="kepala">
+  <div class="bungkus kepala-isi">
+    <a class="merek" href="../index.html">
+      <span class="merek-tanda" aria-hidden="true">B</span>
+      Belmont Tools
+    </a>
+    <nav class="nav">
+      <a href="../index.html#fitur">Fitur</a>
+      <a href="pasang.html" aria-current="page">Panduan</a>
+      <a href="../index.html#unduh">Unduh</a>
+      <a href="https://github.com/sinichi-edogawa/belmont" class="sembunyi-hp">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="bungkus doc" id="isi">
+
+  <aside class="doc-samping">
+    <p class="kecil-huruf">Panduan</p>
+    <ul>
+      <li><a href="pasang.html">Pemasangan</a></li>
+      <li><a href="provider.html">Penyedia &amp; kunci API</a></li>
+      <li><a href="pengaturan.html">Pengaturan</a></li>
+      <li><a href="subagent.html">Subagen &amp; tugas latar</a></li>
+      <li><a href="telegram.html">Telegram</a></li>
+      <li><a href="bangun.html" aria-current="page">Jalankan dari sumber</a></li>
+    </ul>
+  </aside>
+
+  <article class="doc-isi">
+
+    <h1>Jalankan dari sumber</h1>
+    <p class="doc-ringkas">
+      Untuk yang ingin memodifikasi aplikasinya atau membangun installer sendiri.
+      Kalau kamu hanya ingin memakainya,
+      <a href="pasang.html">installer biasa</a> sudah cukup.
+    </p>
+
+    <h2>Yang dibutuhkan</h2>
+    <ul>
+      <li><strong>Node.js</strong> beserta npm. Tidak ada versi minimum yang dipatok di proyek; versi LTS yang sedang berlaku aman.</li>
+      <li><strong>Git</strong>, untuk mengkloning repo.</li>
+      <li>Windows kalau kamu ingin membangun installer Windows — electron-builder membangun target Windows paling mulus di Windows sendiri.</li>
+    </ul>
+
+    <div class="catatan">
+      <p class="catatan-judul">Tanpa bundler</p>
+      <p>
+        Tidak ada webpack, Vite, atau TypeScript di sini. Berkas sumber dijalankan apa adanya
+        oleh Electron, jadi menyunting sebuah berkas lalu memulai ulang aplikasi sudah cukup —
+        tidak ada langkah kompilasi.
+      </p>
+    </div>
+
+    <h2>Menjalankannya</h2>
+    <pre><code>git clone &lt;url-repo&gt;
+cd belmont-tools
+npm install
+npm start</code></pre>
+
+    <p>
+      <code>npm install</code> mengunduh Electron, yang ukurannya ratusan megabita —
+      jalankan sekali dan biarkan selesai.
+    </p>
+
+    <p>Untuk bekerja sambil melihat DevTools:</p>
+    <pre><code>npm run dev</code></pre>
+
+    <h2>Membangun installer</h2>
+    <pre><code>npm run build            # installer NSIS + portable, x64
+npm run build:portable   # hanya portable
+npm run build:mac        # dmg arm64 (belum diuji / belum dirilis)</code></pre>
+
+    <p>
+      Hasilnya muncul di <code>dist/</code>:
+    </p>
+    <pre><code>dist\
+├── Belmont Tools Setup &lt;versi&gt;.exe
+├── Belmont Tools &lt;versi&gt; portable.exe
+└── win-unpacked\                      ← cache antar-build</code></pre>
+
+    <p>
+      Sebelum setiap build, <code>npm run bersihkan</code> berjalan otomatis untuk menghapus
+      artefak build lama dari <code>dist/</code>. Ini bukan sekadar menghemat ruang —
+      sisa berkas dari build yang gagal pernah membuat NSIS menolak menulis keluarannya.
+      Folder <code>win-unpacked/</code> sengaja tidak dihapus karena dipakai sebagai cache.
+    </p>
+
+    <div class="catatan awas">
+      <p class="catatan-judul">Tiap versi memakan ~300 MB</p>
+      <p>
+        Installer dan portable masing-masing sekitar 149 MB karena membawa seluruh runtime
+        Electron. Tanpa pembersihan otomatis itu, <code>dist/</code> menumpuk dengan cepat.
+      </p>
+    </div>
+
+    <h2>Isi proyeknya</h2>
+    <table>
+      <thead><tr><th>Lokasi</th><th>Isi</th></tr></thead>
+      <tbody>
+        <tr><td><code>src/main/</code></td><td>Proses utama Electron: loop agen, tool, penyedia, sesi, jembatan Telegram, MCP</td></tr>
+        <tr><td><code>src/main/providers/</code></td><td>Satu berkas per penyedia, plus pabrik bersama untuk yang OpenAI-compatible</td></tr>
+        <tr><td><code>src/renderer/</code></td><td>Antarmuka: HTML, CSS, JavaScript biasa — tanpa framework</td></tr>
+        <tr><td><code>scripts/</code></td><td>Skrip bantu build</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      Tool agen dijalankan di proses utama, bukan di renderer, dan setiap path yang disentuh
+      melewati satu fungsi pengaman yang menolak apa pun di luar folder kerja. Kalau kamu
+      menambahkan tool baru, lewatkan path-nya ke fungsi itu juga.
+    </p>
+
+    <h2>Menandatangani installer</h2>
+    <p>
+      Build bawaan tidak ditandatangani, karena itulah SmartScreen memperingatkan pengguna.
+      Kalau kamu punya sertifikat penandatanganan kode, electron-builder bisa memakainya —
+      lihat dokumentasi electron-builder tentang code signing. Tanpa sertifikat, tidak ada
+      cara menghilangkan peringatan itu.
+    </p>
+
+    <nav class="lanjut">
+      <a href="telegram.html"><span>Sebelumnya</span>← Telegram</a>
+      <span></span>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="kaki">
+  <div class="bungkus kaki-isi">
+    <span>Belmont Tools · lisensi MIT</span>
+    <a href="https://github.com/sinichi-edogawa/belmont">Repo &amp; rilis</a>
+    <span class="kanan">Dibuat oleh Agus Zaky</span>
+  </div>
+</footer>
+
+</body>
+</html>
