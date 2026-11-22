@@ -14,8 +14,13 @@
     // /panduan/pasang.html dua-duanya bekerja.
     "html_handling": "auto-trailing-slash",
 
-    // Alamat yang tidak dikenal menampilkan halaman depan, bukan layar
-    // kosong. Untuk situs sekecil ini itu lebih baik daripada 404 telanjang.
-    "not_found_handling": "single-page-application"
+    // Alamat yang tidak dikenal menampilkan 404.html dengan status 404
+    // yang benar.
+    //
+    // Sebelumnya ini diisi "single-page-application", yang membuat SETIAP
+    // alamat ngawur menjawab 200 berisi halaman depan. Enak dilihat, tapi
+    // buruk untuk mesin pencari: alamat salah ketik sebanyak apa pun ikut
+    // terlihat sah dan terindeks sebagai halaman duplikat.
+    "not_found_handling": "404-page"
   }
 }

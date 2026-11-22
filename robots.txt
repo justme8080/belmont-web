@@ -1,0 +1,10 @@
+# Situs Belmont Tools — agentharness.my.id
+#
+# Seluruh isi situs ini memang dimaksudkan untuk dibaca publik,
+# jadi tidak ada yang dilarang. Satu-satunya tugas berkas ini
+# adalah menunjukkan letak sitemap.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://agentharness.my.id/sitemap.xml
