@@ -920,18 +920,10 @@ a.kartu p { margin-top: 10px; }
   animation: denyut 2s ease-in-out infinite;
 }
 
-.kaki-bawah {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  align-items: center;
-  padding-top: 24px;
-  border-top: 1px solid var(--garis);
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--samar);
-}
-.kaki-bawah .kanan { margin-left: auto; display: flex; gap: 20px; }
+/* Tanpa baris penutup, petak kaki tidak perlu jarak bawah tambahan —
+   padding .kaki sendiri sudah cukup. */
+.kaki-petak:last-child { margin-bottom: 0; }
+
 .kaki-isi { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
 .kaki-isi .kanan { margin-left: auto; }
 .kaki a { color: var(--redup); }
