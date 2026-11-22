@@ -1,56 +1,131 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="tanpa-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Belmont Tools — agen AI desktop untuk Windows</title>
 <meta name="description" content="Agen AI desktop yang berjalan di komputermu sendiri. Mendukung Claude Code, Anthropic, OpenAI, Gemini, DeepSeek, Kimi, GLM, dan endpoint OpenAI-compatible apa pun.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="aset/gaya.css">
+<script>document.documentElement.classList.remove('tanpa-js');</script>
 </head>
 <body>
 
 <a class="lewati" href="#isi">Lewati ke isi</a>
 
+<div class="aura" aria-hidden="true"><i></i><i></i><i></i></div>
+
 <header class="kepala">
   <div class="bungkus kepala-isi">
     <a class="merek" href="index.html">
-      <span class="merek-tanda" aria-hidden="true">B</span>
-      Belmont Tools
+      <span class="merek-teks">
+        <b>Belmont Tools</b>
+        <span>AGEN HARNESS</span>
+      </span>
     </a>
     <nav class="nav">
       <a href="#fitur">Fitur</a>
+      <a href="#penyedia">Penyedia</a>
       <a href="panduan/pasang.html">Panduan</a>
-      <a href="#unduh">Unduh</a>
       <a href="https://github.com/sinichi-edogawa/belmont" class="sembunyi-hp">GitHub</a>
     </nav>
+    <a class="tombol tombol-utama tombol-kecil sembunyi-hp" href="#unduh">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/></svg>
+      Unduh v0.4.16
+    </a>
   </div>
 </header>
 
 <main id="isi">
 
 <section class="hero bungkus">
-  <span class="lencana">versi 0.4.16 · Windows x64</span>
-  <h1>Agen AI yang bekerja<br>di komputermu sendiri.</h1>
+  <span class="lencana"><span class="titik" aria-hidden="true"></span> Versi 0.4.16 · Windows x64</span>
+  <h1>Agen AI yang bekerja di <em>komputermu sendiri.</em></h1>
   <p class="utama">
-    Belmont Tools adalah aplikasi desktop yang memberi model AI akses nyata ke folder kerjamu —
-    membaca berkas, menyuntingnya, menjalankan perintah shell, menelusuri web. Satu aplikasi,
-    delapan penyedia AI, tanpa langganan ke siapa pun selain penyedia yang kamu pilih sendiri.
+    Akses nyata ke folder kerjamu — membaca berkas, menyuntingnya, menjalankan perintah
+    shell, menelusuri web. Delapan penyedia AI dalam satu aplikasi, dengan akun dan
+    kunci milikmu.
   </p>
   <div class="tombol-baris">
     <a class="tombol tombol-utama" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Setup.exe">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/></svg>
       Unduh untuk Windows
     </a>
-    <a class="tombol tombol-sunyi" href="panduan/pasang.html">Baca panduan</a>
+    <a class="tombol tombol-sunyi" href="panduan/pasang.html">Baca panduan →</a>
   </div>
   <p class="catatan-tombol">
-    Installer 149 MB · tanpa akun, tanpa telemetri · portable juga tersedia di bawah
+    <span class="cek" aria-hidden="true">✓</span>
+    149 MB · tanpa akun, tanpa telemetri · versi portable juga tersedia
   </p>
+
+  <!-- Ilustrasi antarmuka, digambar dengan CSS. -->
+  <div class="pamer" aria-hidden="true">
+    <div class="jendela">
+      <div class="jendela-bar">
+        <span class="lampu"><i></i><i></i><i></i></span>
+        <span class="tajuk">
+          <b>proyek-saya</b> · <span class="mode">Claude Code · supervised</span>
+        </span>
+      </div>
+      <div class="jendela-isi">
+        <div class="mk-samping">
+          <p class="mk-label">Percakapan</p>
+          <div class="mk-chat aktif"><span class="bulat"></span><span class="nama">Audit penanganan galat</span><span class="nyala"></span></div>
+          <div class="mk-chat"><span class="bulat"></span><span class="nama">Refactor pengaturan</span></div>
+          <div class="mk-chat"><span class="bulat"></span><span class="nama">Catatan rilis 0.4.16</span></div>
+          <div class="mk-chat"><span class="bulat"></span><span class="nama">Jembatan Telegram</span></div>
+          <div class="mk-chat"><span class="bulat"></span><span class="nama">Bersihkan dist</span></div>
+          <div class="mk-kunci">🔒 Terkurung di <b>/proyek-saya/</b></div>
+        </div>
+
+        <div class="mk-utama">
+          <div class="mk-user adegan">periksa tiga hal ini sekaligus pakai subagen</div>
+
+          <p class="mk-agen adegan">
+            Saya turunkan tiga subagen paralel — <strong>keamanan</strong>,
+            <strong>performa</strong>, dan <strong>penanganan galat</strong>.
+          </p>
+
+          <div class="mk-aliran adegan">
+            <div class="mk-baris sian">
+              ⟐ Task: audit tiga sudut
+              <span class="kanan">24 langkah</span>
+            </div>
+            <div class="mk-baris hijau">
+              ⤓ Read: src/main/agent.js
+              <span class="kanan">812 baris</span>
+            </div>
+            <div class="bilah"><i></i></div>
+          </div>
+
+          <p class="mk-agen adegan">
+            Dua sudah selesai. Yang ketiga masih menelusuri <code>providers/</code>…
+          </p>
+
+          <div class="mk-latar">
+            <span class="mk-giliran">
+              <span><span class="putar"></span> 3 subagen masih bekerja</span>
+              <span><span class="putar"></span> 2 subagen masih bekerja</span>
+              <span><span class="putar"></span> 1 subagen masih bekerja</span>
+              <span>✓ Semua subagen selesai</span>
+            </span>
+            <span class="mk-ukur">Konteks 14k / 200k</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="pamer-ket">
+      Ilustrasi antarmuka — indikator di dasar jendela tampil selama pekerjaan latar berjalan.
+    </p>
+  </div>
 </section>
 
 <section class="bagian" id="fitur">
   <div class="bungkus">
-    <div class="bagian-kepala">
-      <p class="kecil-huruf">Yang bisa dilakukannya</p>
+    <div class="bagian-kepala muncul">
+      <p class="kecil-huruf">Kemampuan</p>
       <h2>Bukan kotak obrolan. Agen yang mengerjakan.</h2>
       <p>
         Setiap tindakan yang menyentuh berkas atau menjalankan perintah bisa diminta
@@ -58,62 +133,128 @@
       </p>
     </div>
 
-    <div class="petak">
-      <div class="kartu">
-        <span class="kartu-ikon" aria-hidden="true">📂</span>
-        <h3>Berkas dan shell</h3>
+    <div class="bento">
+
+      <div class="kartu k8 muncul">
+        <div class="kartu-atas">
+          <span class="kartu-ikon" style="--w:var(--sian)" aria-hidden="true">⌘</span>
+          <span class="kapsul">◈ Terkurung di folder kerja</span>
+        </div>
+        <h3>Berkas dan shell, dengan pagar</h3>
         <p>
           Daftar isi folder, baca berkas, tulis, sunting per-bagian, jalankan perintah shell.
-          Semua path dipaksa relatif terhadap folder kerjamu dan ditolak kalau mencoba keluar.
+          Setiap path diselesaikan relatif terhadap folder kerjamu — kalau hasilnya keluar
+          dari sana, permintaannya ditolak. Bukan ditanyakan, langsung ditolak.
         </p>
+        <div class="mini">
+          <div class="baris">
+            <span class="tolak">DITOLAK</span>
+            <span class="ket">read_file('../../rahasia.txt') — di luar folder kerja</span>
+          </div>
+          <div class="baris">
+            <span class="terima">DISETUJUI</span>
+            <span class="ket">run_shell('npm test') — keluar dengan kode 0</span>
+          </div>
+        </div>
       </div>
-      <div class="kartu">
-        <span class="kartu-ikon" aria-hidden="true">🔎</span>
-        <h3>Pencarian dan pengambilan web</h3>
-        <p>
-          Menelusuri web lewat Tavily kalau kuncinya kamu isi, atau DuckDuckGo tanpa kunci
-          sama sekali. Bisa juga mengambil isi satu halaman langsung.
-        </p>
-      </div>
-      <div class="kartu">
-        <span class="kartu-ikon" aria-hidden="true">🧩</span>
+
+      <div class="kartu muncul">
+        <div class="kartu-atas">
+          <span class="kartu-ikon" style="--w:var(--hijau)" aria-hidden="true">⇶</span>
+        </div>
         <h3>Subagen paralel</h3>
         <p>
-          Saat memakai Claude Code, agen bisa melahirkan beberapa subagen yang bekerja
-          bersamaan. Ada indikator yang memberi tahu kalau mereka masih berjalan.
+          Beberapa pembantu bekerja bersamaan, masing-masing dengan konteksnya sendiri.
+          Yang kembali ke percakapanmu hanya kesimpulannya.
         </p>
+        <div class="mini">
+          <div class="baris"><span class="id">▪ subagen_keamanan</span><span class="kanan terima">SELESAI</span></div>
+          <div class="baris"><span class="id">▪ subagen_performa</span><span class="kanan terima">SELESAI</span></div>
+          <div class="baris"><span class="id">▪ subagen_galat</span><span class="kanan jalan">BERJALAN…</span></div>
+        </div>
       </div>
-      <div class="kartu">
-        <span class="kartu-ikon" aria-hidden="true">🖼️</span>
-        <h3>Lampiran gambar dan berkas</h3>
+
+      <div class="kartu muncul">
+        <div class="kartu-atas">
+          <span class="kartu-ikon" style="--w:var(--kuning)" aria-hidden="true">⌕</span>
+        </div>
+        <h3>Pencarian web</h3>
         <p>
-          Tarik-lepas atau tempel langsung. Gambar dikirim sebagai gambar (maks 4 MB),
-          berkas teks disisipkan isinya ke dalam percakapan.
+          Lewat Tavily kalau kuncinya kamu isi, atau DuckDuckGo tanpa kunci sama sekali.
+          Bisa juga mengambil isi satu halaman langsung.
         </p>
+        <p class="kartu-kaki">Tavily · DuckDuckGo sebagai cadangan</p>
       </div>
-      <div class="kartu">
-        <span class="kartu-ikon" aria-hidden="true">📱</span>
+
+      <div class="kartu muncul">
+        <div class="kartu-atas">
+          <span class="kartu-ikon" style="--w:var(--ungu)" aria-hidden="true">⧉</span>
+        </div>
+        <h3>Lampiran</h3>
+        <p>
+          Tarik-lepas atau tempel. Gambar dikirim sebagai gambar, berkas teks disisipkan
+          isinya ke percakapan.
+        </p>
+        <p class="kartu-kaki">PNG · JPG · GIF · WEBP — maks 4 MB</p>
+      </div>
+
+      <div class="kartu muncul">
+        <div class="kartu-atas">
+          <span class="kartu-ikon" style="--w:var(--hijau)" aria-hidden="true">◳</span>
+        </div>
         <h3>Kendali dari Telegram</h3>
         <p>
-          Lanjutkan percakapan dari HP, pindah proyek, cek status, setujui tool.
-          Hanya satu chat yang diizinkan, dan koneksinya keluar saja — tanpa membuka port.
+          Lanjutkan dari HP, pindah proyek, setujui tool. Satu chat yang diizinkan, dan
+          koneksinya keluar saja.
         </p>
+        <p class="kartu-kaki hijau">Tanpa port terbuka · tanpa tunnel</p>
       </div>
-      <div class="kartu">
-        <span class="kartu-ikon" aria-hidden="true">🔌</span>
+
+      <div class="kartu k6 muncul">
+        <div class="kartu-atas">
+          <span class="kartu-ikon" style="--w:var(--sian)" aria-hidden="true">⊞</span>
+        </div>
         <h3>Server MCP</h3>
         <p>
-          Tambahkan server Model Context Protocol lewat stdio untuk memperluas kemampuan
-          agen. Bisa diimpor dari JSON konfigurasi yang sudah kamu punya.
+          Tambahkan tool baru lewat Model Context Protocol. Bisa diimpor dari JSON
+          konfigurasi yang sudah kamu punya.
         </p>
+        <div class="mini">
+          <div class="baris"><span class="id">"mcpServers": { "postgres": { "command": "npx" } }</span></div>
+        </div>
       </div>
+
+      <div class="kartu k6 muncul">
+        <div class="kartu-atas">
+          <span class="kartu-ikon" style="--w:var(--ungu)" aria-hidden="true">◱</span>
+        </div>
+        <h3>Sembilan tema, dua bahasa</h3>
+        <p>
+          Antarmuka tersedia dalam Bahasa Indonesia dan Inggris, dengan sembilan tema
+          bawaan.
+        </p>
+        <div class="cip-baris">
+          <span class="cip">ID</span>
+          <span class="cip">EN</span>
+          <span class="cip-ket">· 8 gelap / 1 terang</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section class="bagian" id="penyedia">
   <div class="bungkus">
-    <div class="bagian-kepala">
+
+    <div class="angka-baris muncul">
+      <div class="angka sian"><b>8</b><span>penyedia AI bawaan</span></div>
+      <div class="angka"><b>9</b><span>tema tampilan</span></div>
+      <div class="angka"><b>2</b><span>bahasa antarmuka</span></div>
+      <div class="angka hijau"><b>0</b><span>telemetri</span></div>
+    </div>
+
+    <div class="bagian-kepala muncul" style="margin-top:40px">
       <p class="kecil-huruf">Penyedia AI</p>
       <h2>Delapan bawaan, plus apa pun yang OpenAI-compatible.</h2>
       <p>
@@ -122,111 +263,122 @@
       </p>
     </div>
 
-    <table>
-      <thead>
-        <tr><th>Penyedia</th><th>Perlu kunci API?</th><th>Catatan</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Claude Code</strong></td>
-          <td>Tidak — login akun Claude</td>
-          <td>Satu-satunya yang punya subagen, tingkat usaha, dan tool bawaannya sendiri</td>
-        </tr>
-        <tr><td>Claude (Anthropic)</td><td>Ya</td><td>Lewat API resmi Anthropic</td></tr>
-        <tr><td>OpenAI (ChatGPT)</td><td>Ya</td><td><code>api.openai.com</code></td></tr>
-        <tr><td>Gemini (Google)</td><td>Ya</td><td>Lewat lapisan OpenAI-compatible milik Google</td></tr>
-        <tr><td>DeepSeek</td><td>Ya</td><td><code>api.deepseek.com</code></td></tr>
-        <tr><td>Kimi (Moonshot)</td><td>Ya</td><td><code>api.moonshot.ai</code></td></tr>
-        <tr><td>GLM (Zhipu / Z.ai)</td><td>Ya</td><td><code>api.z.ai</code></td></tr>
-        <tr><td>ONToken.id</td><td>Ya</td><td>Penyedia lokal Indonesia</td></tr>
-        <tr>
-          <td><em>Endpoint custom</em></td>
-          <td>Opsional</td>
-          <td>Masukkan base URL apa pun yang mengikuti format OpenAI</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="tabel-bungkus muncul">
+      <table>
+        <thead>
+          <tr><th>Penyedia</th><th>Perlu kunci API?</th><th>Catatan</th></tr>
+        </thead>
+        <tbody>
+          <tr class="unggul">
+            <td><strong>Claude Code</strong><span class="pin">Unggulan</span></td>
+            <td style="color:var(--hijau-pucat)">Tidak — login akun Claude</td>
+            <td>Satu-satunya yang punya subagen, tingkat usaha, dan tool bawaannya sendiri</td>
+          </tr>
+          <tr><td><strong>Claude (Anthropic)</strong></td><td>Ya</td><td>Lewat API resmi Anthropic</td></tr>
+          <tr><td><strong>OpenAI (ChatGPT)</strong></td><td>Ya</td><td><code>api.openai.com</code></td></tr>
+          <tr><td><strong>Gemini (Google)</strong></td><td>Ya</td><td>Lewat lapisan OpenAI-compatible milik Google</td></tr>
+          <tr><td><strong>DeepSeek</strong></td><td>Ya</td><td><code>api.deepseek.com</code></td></tr>
+          <tr><td><strong>Kimi (Moonshot)</strong></td><td>Ya</td><td><code>api.moonshot.ai</code></td></tr>
+          <tr><td><strong>GLM (Zhipu / Z.ai)</strong></td><td>Ya</td><td><code>api.z.ai</code></td></tr>
+          <tr><td><strong>ONToken.id</strong></td><td>Ya</td><td>Penyedia lokal Indonesia</td></tr>
+          <tr>
+            <td><strong>Endpoint custom</strong></td>
+            <td style="color:var(--sian-redup)">Opsional</td>
+            <td>Base URL apa pun yang mengikuti format OpenAI — termasuk Ollama di komputermu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <p>
-      Daftar model ditarik langsung dari penyedia lewat tombol <strong>Muat ulang</strong>,
-      jadi model baru muncul tanpa perlu memperbarui aplikasi.
-      <a href="panduan/provider.html">Cara mengisi kunci API →</a>
+    <p class="muncul">
+      Daftar model ditarik langsung dari penyedia, jadi model baru muncul tanpa perlu
+      memperbarui aplikasi. <a href="panduan/provider.html">Cara mengisi kunci API →</a>
     </p>
   </div>
 </section>
 
 <section class="bagian" id="unduh">
   <div class="bungkus">
-    <div class="bagian-kepala">
+    <div class="bagian-kepala muncul">
       <p class="kecil-huruf">Unduh</p>
       <h2>Windows 10 atau 11, 64-bit.</h2>
       <p>Belum ada rilis macOS maupun Linux.</p>
     </div>
 
     <div class="petak">
-      <div class="kartu">
-        <h3>Installer <span style="color:var(--teks-samar);font-weight:400">· disarankan</span></h3>
-        <p style="margin-bottom:1rem">
+      <div class="kartu muncul">
+        <div class="kartu-atas">
+          <h3>Installer</h3>
+          <span class="kartu-ikon" style="--w:var(--sian)" aria-hidden="true">⤓</span>
+        </div>
+        <p>
           Memasang ke folder pilihanmu, membuat shortcut, dan menimpa versi lama saat
-          kamu memperbarui. Pengaturanmu tetap aman.
+          kamu memperbarui. Pengaturan dan riwayat percakapan tetap aman.
         </p>
-        <a class="tombol tombol-utama" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Setup.exe">
-          Belmont-Tools-Setup.exe
+        <a class="tombol tombol-utama tombol-penuh" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Setup.exe">
+          Unduh installer
         </a>
       </div>
-      <div class="kartu">
-        <h3>Portable</h3>
-        <p style="margin-bottom:1rem">
-          Satu berkas, tanpa pemasangan. Cocok untuk mencoba dulu atau menjalankannya
-          dari flashdisk. Pengaturan tetap tersimpan di <code>%APPDATA%</code>.
+      <div class="kartu muncul">
+        <div class="kartu-atas">
+          <h3>Portable</h3>
+          <span class="kartu-ikon" style="--w:var(--samar)" aria-hidden="true">▤</span>
+        </div>
+        <p>
+          Satu berkas, tanpa pemasangan. Cocok untuk mencoba dulu. Pengaturan tetap
+          tersimpan di <code>%APPDATA%</code>.
         </p>
-        <a class="tombol tombol-sunyi" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Portable.exe">
-          Belmont-Tools-Portable.exe
+        <a class="tombol tombol-sunyi tombol-penuh" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Portable.exe">
+          Unduh portable
         </a>
       </div>
     </div>
 
-    <div class="catatan awas">
-      <p class="catatan-judul">Windows akan memperingatkanmu</p>
-      <p>
-        Berkasnya belum ditandatangani secara digital, jadi SmartScreen menampilkan
-        &ldquo;Windows protected your PC&rdquo;. Klik <strong>More info</strong> lalu
-        <strong>Run anyway</strong>. Ini normal untuk aplikasi tanpa sertifikat penandatanganan
-        kode — sertifikatnya berbayar, bukan indikator keamanan berkasnya.
-      </p>
+    <div class="catatan awas muncul">
+      <div class="catatan-isi">
+        <p class="catatan-judul">Windows akan memperingatkanmu</p>
+        <p>
+          Berkasnya belum ditandatangani secara digital, jadi SmartScreen menampilkan
+          &ldquo;Windows protected your PC&rdquo;. Klik <strong>More info</strong> lalu
+          <strong>Run anyway</strong>. Peringatan ini tentang ketidaktahuan Windows soal
+          siapa penerbitnya — sertifikat penandatanganan kode berbayar, dan belum dibeli.
+          Kalau kamu ingin memastikan sendiri,
+          <a href="panduan/bangun.html">installer-nya bisa kamu bangun dari sumber</a>.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="bagian">
+<section class="bagian" id="panduan">
   <div class="bungkus">
-    <div class="bagian-kepala">
+    <div class="bagian-kepala muncul">
       <p class="kecil-huruf">Panduan</p>
       <h2>Mulai dari sini.</h2>
     </div>
     <div class="petak">
-      <a class="kartu" href="panduan/pasang.html">
-        <h3>Pemasangan →</h3>
-        <p>Unduh, pasang, lewati peringatan Windows, dan atur folder kerja pertamamu.</p>
+      <a class="kartu muncul" href="panduan/pasang.html">
+        <div class="kartu-judul"><h3>Pemasangan</h3><span class="panah" aria-hidden="true">→</span></div>
+        <p>Unduh, pasang, lewati peringatan Windows, atur folder kerja pertamamu.</p>
       </a>
-      <a class="kartu" href="panduan/provider.html">
-        <h3>Penyedia &amp; kunci API →</h3>
+      <a class="kartu muncul" href="panduan/provider.html">
+        <div class="kartu-judul"><h3>Penyedia &amp; kunci API</h3><span class="panah" aria-hidden="true">→</span></div>
         <p>Login akun Claude atau tempel kunci API, lalu pilih modelnya.</p>
       </a>
-      <a class="kartu" href="panduan/pengaturan.html">
-        <h3>Pengaturan →</h3>
+      <a class="kartu muncul" href="panduan/pengaturan.html">
+        <div class="kartu-judul"><h3>Pengaturan</h3><span class="panah" aria-hidden="true">→</span></div>
         <p>Setiap opsi dijelaskan, termasuk yang hanya bisa diubah dari berkas.</p>
       </a>
-      <a class="kartu" href="panduan/subagent.html">
-        <h3>Subagen &amp; tugas latar →</h3>
+      <a class="kartu muncul" href="panduan/subagent.html">
+        <div class="kartu-judul"><h3>Subagen &amp; tugas latar</h3><span class="panah" aria-hidden="true">→</span></div>
         <p>Menjalankan banyak agen sekaligus dan membaca indikatornya.</p>
       </a>
-      <a class="kartu" href="panduan/telegram.html">
-        <h3>Telegram →</h3>
+      <a class="kartu muncul" href="panduan/telegram.html">
+        <div class="kartu-judul"><h3>Telegram</h3><span class="panah" aria-hidden="true">→</span></div>
         <p>Mengendalikan agen dari HP, beserta batasan dan risikonya.</p>
       </a>
-      <a class="kartu" href="panduan/bangun.html">
-        <h3>Jalankan dari sumber →</h3>
+      <a class="kartu muncul" href="panduan/bangun.html">
+        <div class="kartu-judul"><h3>Jalankan dari sumber</h3><span class="panah" aria-hidden="true">→</span></div>
         <p>Untuk yang ingin memodifikasi atau membangun installer sendiri.</p>
       </a>
     </div>
@@ -236,12 +388,51 @@
 </main>
 
 <footer class="kaki">
-  <div class="bungkus kaki-isi">
-    <span>Belmont Tools · lisensi MIT</span>
-    <a href="https://github.com/sinichi-edogawa/belmont">Repo &amp; rilis</a>
-    <span class="kanan">Dibuat oleh Agus Zaky</span>
+  <div class="bungkus">
+    <div class="kaki-petak">
+      <div class="kaki-kolom">
+        <a class="merek" href="index.html" style="margin-bottom:14px">
+          <span class="merek-teks"><b>Belmont Tools</b></span>
+        </a>
+        <p>
+          Agen AI desktop yang berjalan di komputermu sendiri, dengan akun dan kunci
+          API milikmu. Tanpa server perantara, tanpa telemetri.
+        </p>
+        <span class="kaki-status"><span class="titik"></span> Rilis stabil 0.4.16</span>
+      </div>
+
+      <div class="kaki-kolom">
+        <h4>Produk</h4>
+        <a href="#fitur">Fitur</a>
+        <a href="#penyedia">Penyedia AI</a>
+        <a href="#unduh">Unduh</a>
+        <a href="https://github.com/sinichi-edogawa/belmont/releases">Riwayat rilis</a>
+      </div>
+
+      <div class="kaki-kolom">
+        <h4>Panduan</h4>
+        <a href="panduan/pasang.html">Pemasangan</a>
+        <a href="panduan/pengaturan.html">Pengaturan</a>
+        <a href="panduan/subagent.html">Subagen</a>
+        <a href="panduan/telegram.html">Telegram</a>
+      </div>
+
+      <div class="kaki-kolom">
+        <h4>Sumber</h4>
+        <a href="https://github.com/sinichi-edogawa/belmont">Repo GitHub</a>
+        <a href="panduan/bangun.html">Bangun dari sumber</a>
+        <p style="margin-top:14px">
+          Dirilis di bawah Lisensi MIT.
+        </p>
+      </div>
+    </div>
+
+    <div class="kaki-bawah">
+      <span>Belmont Tools · Lisensi MIT</span>
+    </div>
   </div>
 </footer>
 
+<script src="aset/gerak.js" defer></script>
 </body>
 </html>

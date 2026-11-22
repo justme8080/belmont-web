@@ -34,9 +34,16 @@ aset/
 
 **Teks** — buka berkas `.html`-nya, cari kalimatnya, ubah, simpan.
 
-**Warna** — semuanya terkumpul sebagai variabel di bagian atas `aset/gaya.css`,
-di blok `:root` untuk tema gelap dan `@media (prefers-color-scheme: light)`
-untuk tema terang. Situs mengikuti tema sistem pengunjung secara otomatis.
+**Warna** — semuanya terkumpul sebagai variabel di blok `:root` di bagian atas
+`aset/gaya.css`. Situs selalu gelap, tidak mengikuti tema sistem pengunjung
+(`color-scheme: dark` memberitahu peramban agar scrollbar dan kontrol
+bawaannya ikut gelap).
+
+Satu-satunya warna yang ditulis langsung di luar `:root` adalah gradien pada
+kotak logo di `.merek-tanda`.
+
+`--aksen-teks` adalah warna teks di atas tombol beraksen. Kalau kamu mengganti
+`--aksen` ke warna gelap, ubah juga nilai ini agar tulisan tombol tetap terbaca.
 
 **Menu navigasi** — diulang di setiap berkas (konsekuensi dari tidak memakai
 build step). Mengubahnya berarti menyunting ketujuh berkas. Kalau halamannya
