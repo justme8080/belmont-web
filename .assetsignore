@@ -1,0 +1,6 @@
+# Jangan ikut disajikan sebagai bagian situs
+.git
+.gitignore
+README.md
+wrangler.jsonc
+.assetsignore

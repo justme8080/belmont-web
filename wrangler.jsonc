@@ -1,0 +1,21 @@
+{
+  // Konfigurasi Cloudflare Workers untuk situs statis.
+  //
+  // Tidak ada "main" di sini — tanpa skrip Worker, Cloudflare menyajikan
+  // isi folder apa adanya sebagai berkas statis. Itu yang kita mau:
+  // situs ini HTML dan CSS murni, tidak ada yang perlu dijalankan di server.
+  "name": "belmont-web",
+  "compatibility_date": "2026-11-22",
+
+  "assets": {
+    "directory": "./",
+
+    // "auto-trailing-slash" membuat /panduan/pasang dan
+    // /panduan/pasang.html dua-duanya bekerja.
+    "html_handling": "auto-trailing-slash",
+
+    // Alamat yang tidak dikenal menampilkan halaman depan, bukan layar
+    // kosong. Untuk situs sekecil ini itu lebih baik daripada 404 telanjang.
+    "not_found_handling": "single-page-application"
+  }
+}
