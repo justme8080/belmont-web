@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="tanpa-js">
+<html lang="id">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,21 +9,23 @@
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://agentharness.my.id/">
+<meta property="og:title" content="Belmont Tools — agen AI desktop untuk Windows">
+<meta property="og:description" content="Agen AI desktop yang berjalan di komputermu sendiri, dengan akun dan kunci API milikmu. Tanpa server perantara, tanpa telemetri.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="aset/gaya.css">
-<script>document.documentElement.classList.remove('tanpa-js');</script>
 </head>
 <body>
 
 <a class="lewati" href="#isi">Lewati ke isi</a>
 
-<div class="aura" aria-hidden="true"><i></i><i></i><i></i></div>
-
 <header class="kepala">
   <div class="bungkus kepala-isi">
     <a class="merek" href="index.html">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#6fd9ae"/><path fill="#0a0a0d" fill-rule="evenodd" d="M24 20H52a15 15 0 010 30H24Zm0 30h30a15 15 0 010 30H24Zm14-20h11a5 5 0 010 10H38Zm0 30h13a5 5 0 010 10H38Z"/></svg>
       <span class="merek-teks">
         <b>Belmont Tools</b>
         <span>AGEN HARNESS</span>
@@ -31,316 +33,301 @@
     </a>
     <nav class="nav">
       <a href="#fitur">Fitur</a>
+      <a href="#pagar">Pagar</a>
       <a href="#penyedia">Penyedia</a>
       <a href="panduan/pasang.html">Panduan</a>
       <a href="https://github.com/sinichi-edogawa/belmont" class="sembunyi-hp">GitHub</a>
     </nav>
-    <a class="tombol tombol-utama tombol-kecil sembunyi-hp" href="#unduh">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/></svg>
-      Unduh v0.4.16
-    </a>
+    <a class="tombol tombol-utama tombol-kecil" href="#unduh">Unduh</a>
   </div>
 </header>
 
 <main id="isi">
 
-<section class="hero bungkus">
-  <span class="lencana"><span class="titik" aria-hidden="true"></span> Versi 0.4.16 · Windows x64</span>
-  <h1>Agen AI yang bekerja di <em>komputermu sendiri.</em></h1>
-  <p class="utama">
-    Akses nyata ke folder kerjamu — membaca berkas, menyuntingnya, menjalankan perintah
-    shell, menelusuri web. Delapan penyedia AI dalam satu aplikasi, dengan akun dan
-    kunci milikmu.
-  </p>
-  <div class="tombol-baris">
-    <a class="tombol tombol-utama" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Setup.exe">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/></svg>
-      Unduh untuk Windows
-    </a>
-    <a class="tombol tombol-sunyi" href="panduan/pasang.html">Baca panduan →</a>
-  </div>
-  <p class="catatan-tombol">
-    <span class="cek" aria-hidden="true">✓</span>
-    149 MB · tanpa akun, tanpa telemetri · versi portable juga tersedia
-  </p>
-
-  <!-- Ilustrasi antarmuka, digambar dengan CSS. -->
-  <div class="pamer" aria-hidden="true">
-    <div class="jendela">
-      <div class="jendela-bar">
-        <span class="lampu"><i></i><i></i><i></i></span>
-        <span class="tajuk">
-          <b>proyek-saya</b> · <span class="mode">Claude Code · supervised</span>
-        </span>
-      </div>
-      <div class="jendela-isi">
-        <div class="mk-samping">
-          <p class="mk-label">Percakapan</p>
-          <div class="mk-chat aktif"><span class="bulat"></span><span class="nama">Audit penanganan galat</span><span class="nyala"></span></div>
-          <div class="mk-chat"><span class="bulat"></span><span class="nama">Refactor pengaturan</span></div>
-          <div class="mk-chat"><span class="bulat"></span><span class="nama">Catatan rilis 0.4.16</span></div>
-          <div class="mk-chat"><span class="bulat"></span><span class="nama">Jembatan Telegram</span></div>
-          <div class="mk-chat"><span class="bulat"></span><span class="nama">Bersihkan dist</span></div>
-          <div class="mk-kunci">🔒 Terkurung di <b>/proyek-saya/</b></div>
-        </div>
-
-        <div class="mk-utama">
-          <div class="mk-user adegan">periksa tiga hal ini sekaligus pakai subagen</div>
-
-          <p class="mk-agen adegan">
-            Saya turunkan tiga subagen paralel — <strong>keamanan</strong>,
-            <strong>performa</strong>, dan <strong>penanganan galat</strong>.
-          </p>
-
-          <div class="mk-aliran adegan">
-            <div class="mk-baris sian">
-              ⟐ Task: audit tiga sudut
-              <span class="kanan">24 langkah</span>
-            </div>
-            <div class="mk-baris hijau">
-              ⤓ Read: src/main/agent.js
-              <span class="kanan">812 baris</span>
-            </div>
-            <div class="bilah"><i></i></div>
-          </div>
-
-          <p class="mk-agen adegan">
-            Dua sudah selesai. Yang ketiga masih menelusuri <code>providers/</code>…
-          </p>
-
-          <div class="mk-latar">
-            <span class="mk-giliran">
-              <span><span class="putar"></span> 3 subagen masih bekerja</span>
-              <span><span class="putar"></span> 2 subagen masih bekerja</span>
-              <span><span class="putar"></span> 1 subagen masih bekerja</span>
-              <span>✓ Semua subagen selesai</span>
-            </span>
-            <span class="mk-ukur">Konteks 14k / 200k</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="pamer-ket">
-      Ilustrasi antarmuka — indikator di dasar jendela tampil selama pekerjaan latar berjalan.
+<!-- ===================== HERO ===================== -->
+<section class="panel p-hero">
+  <div class="hero-isi">
+    <h1>Agen yang bekerja semalaman<br>tanpa meninggalkan mejamu</h1>
+    <p>
+      Membaca berkas, menyuntingnya, menjalankan perintah shell — semuanya di
+      komputermu, dengan <a href="panduan/provider.html">akun dan kunci milikmu</a>.
     </p>
+    <div class="hero-tbl">
+      <a class="tombol tombol-utama" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Setup.exe">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.949-1.801"/></svg>
+        Unduh untuk Windows
+      </a>
+      <a class="tombol tombol-sunyi" href="panduan/pasang.html">Panduan</a>
+    </div>
   </div>
+  <p class="hero-ket">149 MB · v0.4.17 · tanpa akun · tanpa telemetri</p>
 </section>
 
-<section class="bagian" id="fitur">
-  <div class="bungkus">
-    <div class="bagian-kepala muncul">
-      <p class="kecil-huruf">Kemampuan</p>
-      <h2>Bukan kotak obrolan. Agen yang mengerjakan.</h2>
+<!-- ===================== SUBAGEN ===================== -->
+<section class="panel" id="fitur">
+  <div class="dalam">
+    <div class="alur" aria-hidden="true">
+      <i class="simpul a"></i><i class="simpul b"></i><i class="simpul c"></i>
+      <span class="lentera"><svg viewBox="0 0 24 30" fill="none" stroke="#6fd9ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1.5v2.6"/><path d="M8 5.2h8l-1.1 1.8H9.1z"/><rect x="7.4" y="7.4" width="9.2" height="13.4" rx="2.4"/><path d="M9.2 21h5.6l1.2 2.6H8z"/><ellipse cx="12" cy="14.1" rx="2" ry="2.9" fill="#ffc47a" stroke="none"><animate attributeName="opacity" values=".72;1;.72" dur="3.6s" repeatCount="indefinite"/></ellipse></svg></span>
+    </div>
+
+    <div class="teks">
+      <span class="pil">Kerjakan serentak</span>
+      <h2>Tiga sudut diperiksa<br>dalam satu perintah</h2>
       <p>
-        Setiap tindakan yang menyentuh berkas atau menjalankan perintah bisa diminta
-        persetujuanmu lebih dulu — dan tidak bisa keluar dari folder kerja yang kamu tentukan.
+        Subagen diturunkan bersamaan, masing-masing dengan konteksnya sendiri.
+        Yang kembali ke percakapanmu hanya kesimpulannya, bukan seluruh jejaknya.
+        <a class="pelajari" href="panduan/subagent.html">Pelajari →</a>
       </p>
     </div>
 
-    <div class="bento">
-
-      <div class="kartu k8 muncul">
-        <div class="kartu-atas">
-          <span class="kartu-ikon" style="--w:var(--sian)" aria-hidden="true">⌘</span>
-          <span class="kapsul">◈ Terkurung di folder kerja</span>
+    <!-- Ilustrasi antarmuka — digambar, bukan tangkapan layar. -->
+    <div class="panggung panggung-lega">
+      <div class="jendela" aria-hidden="true">
+        <div class="j-bar">
+          <span class="lampu"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></span>
+          <span class="j-tajuk">proyek-saya <span class="t">·</span> <span class="sian">Claude Code</span> <span class="t">·</span> <span class="hijau">supervised</span></span>
         </div>
-        <h3>Berkas dan shell, dengan pagar</h3>
-        <p>
-          Daftar isi folder, baca berkas, tulis, sunting per-bagian, jalankan perintah shell.
-          Setiap path diselesaikan relatif terhadap folder kerjamu — kalau hasilnya keluar
-          dari sana, permintaannya ditolak. Bukan ditanyakan, langsung ditolak.
-        </p>
-        <div class="mini">
-          <div class="baris">
-            <span class="tolak">DITOLAK</span>
-            <span class="ket">read_file('../../rahasia.txt') — di luar folder kerja</span>
+
+        <div class="j-isi">
+          <aside class="j-samping">
+            <p class="j-label">Percakapan</p>
+            <div class="j-chat aktif"><i></i><span>Audit penanganan galat</span><b></b></div>
+            <div class="j-chat"><i></i><span>Refactor pengaturan</span></div>
+            <div class="j-chat"><i></i><span>Catatan rilis 0.4.17</span></div>
+            <div class="j-chat"><i></i><span>Jembatan Telegram</span></div>
+            <div class="j-chat"><i></i><span>Bersihkan dist</span></div>
+            <div class="j-kunci">
+              <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8.5 11V7.5a3.5 3.5 0 017 0V11"/></svg>
+              <span>Terkurung di <b>/proyek-saya/</b></span>
+            </div>
+          </aside>
+
+          <div class="j-utama">
+            <div class="j-user">periksa tiga hal ini sekaligus pakai subagen</div>
+            <p class="j-agen">Saya turunkan tiga subagen paralel — <b>keamanan</b>, <b>performa</b>, dan <b>penanganan galat</b>.</p>
+            <div class="j-aliran">
+              <div class="j-baris sian"><span>&#9671; Task: audit tiga sudut</span><span class="kn">24 langkah</span></div>
+              <div class="j-baris hijau"><span>&#8595; Read: src/main/agent.js</span><span class="kn">812 baris</span></div>
+              <div class="j-bilah"><i></i></div>
+            </div>
+            <p class="j-agen">Dua sudah selesai. Yang ketiga masih menelusuri <code>providers/</code> …</p>
+            <div class="j-kaki">
+              <span class="j-giliran"><span class="j-gulung">
+                <span>3 subagen masih bekerja</span>
+                <span>2 subagen masih bekerja</span>
+                <span>1 subagen masih bekerja</span>
+                <span>semua subagen selesai</span>
+              </span></span>
+              <span>Konteks 14k / 200k</span>
+            </div>
           </div>
-          <div class="baris">
-            <span class="terima">DISETUJUI</span>
-            <span class="ket">run_shell('npm test') — keluar dengan kode 0</span>
-          </div>
         </div>
       </div>
+    </div>
 
-      <div class="kartu muncul">
-        <div class="kartu-atas">
-          <span class="kartu-ikon" style="--w:var(--hijau)" aria-hidden="true">⇶</span>
-        </div>
-        <h3>Subagen paralel</h3>
-        <p>
-          Beberapa pembantu bekerja bersamaan, masing-masing dengan konteksnya sendiri.
-          Yang kembali ke percakapanmu hanya kesimpulannya.
-        </p>
-        <div class="mini">
-          <div class="baris"><span class="id">▪ subagen_keamanan</span><span class="kanan terima">SELESAI</span></div>
-          <div class="baris"><span class="id">▪ subagen_performa</span><span class="kanan terima">SELESAI</span></div>
-          <div class="baris"><span class="id">▪ subagen_galat</span><span class="kanan jalan">BERJALAN…</span></div>
-        </div>
+    <div class="tiga">
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
+        <h3>Jalan bersamaan</h3>
+        <p>Tiga sudut diperiksa serentak, bukan antre satu per satu.</p>
       </div>
-
-      <div class="kartu muncul">
-        <div class="kartu-atas">
-          <span class="kartu-ikon" style="--w:var(--kuning)" aria-hidden="true">⌕</span>
-        </div>
-        <h3>Pencarian web</h3>
-        <p>
-          Lewat Tavily kalau kuncinya kamu isi, atau DuckDuckGo tanpa kunci sama sekali.
-          Bisa juga mengambil isi satu halaman langsung.
-        </p>
-        <p class="kartu-kaki">Tavily · DuckDuckGo sebagai cadangan</p>
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12h6"/></svg>
+        <h3>Konteks terpisah</h3>
+        <p>Jejak panjang tiap subagen tidak ikut membanjiri percakapanmu.</p>
       </div>
-
-      <div class="kartu muncul">
-        <div class="kartu-atas">
-          <span class="kartu-ikon" style="--w:var(--ungu)" aria-hidden="true">⧉</span>
-        </div>
-        <h3>Lampiran</h3>
-        <p>
-          Tarik-lepas atau tempel. Gambar dikirim sebagai gambar, berkas teks disisipkan
-          isinya ke percakapan.
-        </p>
-        <p class="kartu-kaki">PNG · JPG · GIF · WEBP — maks 4 MB</p>
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3>Hanya kesimpulan</h3>
+        <p>Yang kembali cuma hasil akhirnya, lengkap dengan jumlah langkah.</p>
       </div>
+    </div>
 
-      <div class="kartu muncul">
-        <div class="kartu-atas">
-          <span class="kartu-ikon" style="--w:var(--hijau)" aria-hidden="true">◳</span>
-        </div>
+    <div class="alternatif">
+      Subagen hanya ada di penyedia <span>Claude Code</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PAGAR ===================== -->
+<section class="panel panel-2" id="pagar">
+  <div class="dalam">
+    <div class="alur" aria-hidden="true">
+      <i class="simpul a"></i><i class="simpul b"></i><i class="simpul c"></i>
+      <span class="lentera"><svg viewBox="0 0 24 30" fill="none" stroke="#6fd9ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1.5v2.6"/><path d="M8 5.2h8l-1.1 1.8H9.1z"/><rect x="7.4" y="7.4" width="9.2" height="13.4" rx="2.4"/><path d="M9.2 21h5.6l1.2 2.6H8z"/><ellipse cx="12" cy="14.1" rx="2" ry="2.9" fill="#ffc47a" stroke="none"><animate attributeName="opacity" values=".72;1;.72" dur="3.6s" repeatCount="indefinite"/></ellipse></svg></span>
+    </div>
+
+    <div class="teks">
+      <span class="pil pil-jingga">Pagar dan izin</span>
+      <h2>Ditolak, bukan ditanyakan</h2>
+      <p>
+        Setiap path diselesaikan relatif terhadap folder kerjamu. Kalau hasilnya
+        keluar dari sana, permintaannya berhenti di lapisan tool — tidak ada
+        dialog yang bisa kamu klik terlanjur.
+        <a class="pelajari" href="panduan/pengaturan.html">Pelajari →</a>
+      </p>
+    </div>
+
+    <!-- Diagram batas folder kerja. -->
+    <div class="panggung">
+      <svg viewBox="0 0 900 360" role="img" aria-label="Diagram: permintaan di dalam folder kerja diizinkan, yang menembus batas dipantulkan">
+        <defs>
+          <path id="bebas1" d="M250 120 C 330 90, 420 140, 500 110 C 560 90, 600 150, 520 180 C 430 215, 300 190, 250 120"/>
+          <path id="bebas2" d="M300 250 C 380 280, 470 230, 540 260 C 600 285, 560 320, 470 305 C 370 288, 300 250, 300 250"/>
+          <path id="tembus" d="M420 190 L 712 190 L 420 190"/>
+          <pattern id="luar" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="9" stroke="#1b1f26" stroke-width="2"/>
+          </pattern>
+          <style>
+            .m{ font:500 12px 'IBM Plex Mono',monospace }
+            .m-redup{ fill:#787e86 } .m-tinta{ fill:#f4f5f6 }
+          </style>
+        </defs>
+
+        <rect x="0" y="0" width="900" height="360" fill="url(#luar)" opacity=".6"/>
+
+        <rect x="170" y="56" width="540" height="248" rx="16"
+              fill="#0e1419" stroke="#6fd9ae" stroke-width="1.4"
+              stroke-dasharray="7 6" opacity=".85">
+          <animate attributeName="stroke-dashoffset" values="0;-26" dur="2.6s" repeatCount="indefinite"/>
+        </rect>
+        <text class="m m-tinta" x="186" y="44">~/proyek-saya</text>
+        <text class="m m-redup" x="724" y="44">di luar folder kerja</text>
+
+        <circle r="4" fill="#6fd9ae"><animateMotion dur="11s" repeatCount="indefinite"><mpath href="#bebas1"/></animateMotion></circle>
+        <circle r="4" fill="#6fd9ae" opacity=".65"><animateMotion dur="13s" begin="-4s" repeatCount="indefinite"><mpath href="#bebas2"/></animateMotion></circle>
+
+        <circle r="5" fill="#e8706a">
+          <animateMotion dur="6s" repeatCount="indefinite"
+            keyPoints="0;.5;.5;1;0" keyTimes="0;.42;.5;.78;1" calcMode="linear">
+            <mpath href="#tembus"/>
+          </animateMotion>
+        </circle>
+
+        <circle cx="710" cy="190" r="6" fill="none" stroke="#e8706a" stroke-width="2" opacity="0">
+          <animate attributeName="r"       values="6;6;34;34"   dur="6s" keyTimes="0;.42;.62;1"    repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;0;.85;0;0" dur="6s" keyTimes="0;.42;.48;.64;1" repeatCount="indefinite"/>
+        </circle>
+        <path d="M710 170 L710 210" stroke="#e8706a" stroke-width="3" opacity="0">
+          <animate attributeName="opacity" values="0;0;1;0" dur="6s" keyTimes="0;.42;.46;.6" repeatCount="indefinite"/>
+        </path>
+
+        <g opacity="0">
+          <animate attributeName="opacity" values="0;0;1;1;0" dur="6s" keyTimes="0;.43;.48;.72;1" repeatCount="indefinite"/>
+          <rect x="726" y="172" width="86" height="24" rx="5" fill="#2f1a18" stroke="#e8706a" stroke-width=".8"/>
+          <text class="m" x="769" y="189" text-anchor="middle" fill="#e8706a">DITOLAK</text>
+        </g>
+
+        <text class="m m-redup" x="186" y="334">read_file('../../rahasia.txt')</text>
+        <text class="m" x="694" y="334" text-anchor="end" fill="#e8706a" opacity="0">
+          <animate attributeName="opacity" values="0;0;1;1;0" dur="6s" keyTimes="0;.43;.48;.72;1" repeatCount="indefinite"/>
+          ditolak di lapisan tool
+        </text>
+      </svg>
+    </div>
+
+    <div class="tiga">
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+        <h3>Bukan sekadar perintah</h3>
+        <p>Penolakan terjadi di kode tool, bukan di prompt yang bisa dibujuk.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>
+        <h3>Satu folder per proyek</h3>
+        <p>Tiap proyek terikat ke folder kerjanya masing-masing.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 11-9-9"/><path d="M12 3v9l6 3"/></svg>
         <h3>Kendali dari Telegram</h3>
-        <p>
-          Lanjutkan dari HP, pindah proyek, setujui tool. Satu chat yang diizinkan, dan
-          koneksinya keluar saja.
-        </p>
-        <p class="kartu-kaki hijau">Tanpa port terbuka · tanpa tunnel</p>
+        <p>Setujui tool dari HP. Tanpa port terbuka, tanpa tunnel.</p>
       </div>
-
-      <div class="kartu k6 muncul">
-        <div class="kartu-atas">
-          <span class="kartu-ikon" style="--w:var(--sian)" aria-hidden="true">⊞</span>
-        </div>
-        <h3>Server MCP</h3>
-        <p>
-          Tambahkan tool baru lewat Model Context Protocol. Bisa diimpor dari JSON
-          konfigurasi yang sudah kamu punya.
-        </p>
-        <div class="mini">
-          <div class="baris"><span class="id">"mcpServers": { "postgres": { "command": "npx" } }</span></div>
-        </div>
-      </div>
-
-      <div class="kartu k6 muncul">
-        <div class="kartu-atas">
-          <span class="kartu-ikon" style="--w:var(--ungu)" aria-hidden="true">◱</span>
-        </div>
-        <h3>Sembilan tema, dua bahasa</h3>
-        <p>
-          Antarmuka tersedia dalam Bahasa Indonesia dan Inggris, dengan sembilan tema
-          bawaan.
-        </p>
-        <div class="cip-baris">
-          <span class="cip">ID</span>
-          <span class="cip">EN</span>
-          <span class="cip-ket">· 8 gelap / 1 terang</span>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<section class="bagian" id="penyedia">
-  <div class="bungkus">
-
-    <div class="angka-baris muncul">
-      <div class="angka sian"><b>8</b><span>penyedia AI bawaan</span></div>
-      <div class="angka"><b>9</b><span>tema tampilan</span></div>
-      <div class="angka"><b>2</b><span>bahasa antarmuka</span></div>
-      <div class="angka hijau"><b>0</b><span>telemetri</span></div>
+<!-- ===================== PENYEDIA ===================== -->
+<section class="panel" id="penyedia">
+  <div class="dalam">
+    <div class="alur" aria-hidden="true">
+      <i class="simpul a"></i><i class="simpul b"></i><i class="simpul c"></i>
+      <span class="lentera"><svg viewBox="0 0 24 30" fill="none" stroke="#6fd9ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1.5v2.6"/><path d="M8 5.2h8l-1.1 1.8H9.1z"/><rect x="7.4" y="7.4" width="9.2" height="13.4" rx="2.4"/><path d="M9.2 21h5.6l1.2 2.6H8z"/><ellipse cx="12" cy="14.1" rx="2" ry="2.9" fill="#ffc47a" stroke="none"><animate attributeName="opacity" values=".72;1;.72" dur="3.6s" repeatCount="indefinite"/></ellipse></svg></span>
     </div>
 
-    <div class="bagian-kepala muncul" style="margin-top:40px">
-      <p class="kecil-huruf">Penyedia AI</p>
-      <h2>Delapan bawaan, plus apa pun yang OpenAI-compatible.</h2>
+    <div class="teks">
+      <span class="pil">Penyedia</span>
+      <h2>Delapan bawaan, plus<br>apa pun yang kompatibel</h2>
       <p>
-        Kunci API-mu disimpan di berkas pengaturan di komputermu sendiri dan dipakai
-        hanya untuk memanggil penyedia yang bersangkutan.
+        Kunci API-mu disimpan di berkas pengaturan di komputermu sendiri. Daftar
+        model ditarik langsung dari penyedia, jadi model baru muncul tanpa perlu
+        memperbarui aplikasi.
+        <a class="pelajari" href="panduan/provider.html">Pelajari →</a>
       </p>
     </div>
 
-    <div class="tabel-bungkus muncul">
+    <div class="tabel">
       <table>
-        <thead>
-          <tr><th>Penyedia</th><th>Perlu kunci API?</th><th>Catatan</th></tr>
-        </thead>
+        <thead><tr><th>Penyedia</th><th>Perlu kunci</th><th>Catatan</th></tr></thead>
         <tbody>
-          <tr class="unggul">
-            <td><strong>Claude Code</strong><span class="pin">Unggulan</span></td>
-            <td style="color:var(--hijau-pucat)">Tidak — login akun Claude</td>
-            <td>Satu-satunya yang punya subagen, tingkat usaha, dan tool bawaannya sendiri</td>
-          </tr>
-          <tr><td><strong>Claude (Anthropic)</strong></td><td>Ya</td><td>Lewat API resmi Anthropic</td></tr>
-          <tr><td><strong>OpenAI (ChatGPT)</strong></td><td>Ya</td><td><code>api.openai.com</code></td></tr>
-          <tr><td><strong>Gemini (Google)</strong></td><td>Ya</td><td>Lewat lapisan OpenAI-compatible milik Google</td></tr>
-          <tr><td><strong>DeepSeek</strong></td><td>Ya</td><td><code>api.deepseek.com</code></td></tr>
-          <tr><td><strong>Kimi (Moonshot)</strong></td><td>Ya</td><td><code>api.moonshot.ai</code></td></tr>
-          <tr><td><strong>GLM (Zhipu / Z.ai)</strong></td><td>Ya</td><td><code>api.z.ai</code></td></tr>
-          <tr><td><strong>ONToken.id</strong></td><td>Ya</td><td>Penyedia lokal Indonesia</td></tr>
-          <tr>
-            <td><strong>Endpoint custom</strong></td>
-            <td style="color:var(--sian-redup)">Opsional</td>
-            <td>Base URL apa pun yang mengikuti format OpenAI — termasuk Ollama di komputermu</td>
-          </tr>
+          <tr class="unggul"><td><strong>Claude Code</strong><span class="pin">UNGGULAN</span></td><td class="m" style="color:#4fc98d">Tidak — login akun</td><td>Punya subagen, tingkat usaha, dan tool bawaannya sendiri</td></tr>
+          <tr><td><strong>Claude (Anthropic)</strong></td><td class="m">Ya</td><td>Lewat API resmi Anthropic</td></tr>
+          <tr><td><strong>OpenAI (ChatGPT)</strong></td><td class="m">Ya</td><td class="m">api.openai.com</td></tr>
+          <tr><td><strong>Gemini (Google)</strong></td><td class="m">Ya</td><td>Lapisan OpenAI-compatible milik Google</td></tr>
+          <tr><td><strong>DeepSeek</strong></td><td class="m">Ya</td><td class="m">api.deepseek.com</td></tr>
+          <tr><td><strong>Kimi (Moonshot)</strong></td><td class="m">Ya</td><td class="m">api.moonshot.ai</td></tr>
+          <tr><td><strong>GLM (Zhipu / Z.ai)</strong></td><td class="m">Ya</td><td class="m">api.z.ai</td></tr>
+          <tr><td><strong>ONToken.id</strong></td><td class="m">Ya</td><td>Penyedia lokal Indonesia</td></tr>
+          <tr><td><strong>Endpoint custom</strong></td><td class="m" style="color:var(--aksen)">Opsional</td><td>Base URL apa pun format OpenAI — termasuk Ollama di komputermu</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p class="muncul">
-      Daftar model ditarik langsung dari penyedia, jadi model baru muncul tanpa perlu
-      memperbarui aplikasi. <a href="panduan/provider.html">Cara mengisi kunci API →</a>
-    </p>
+    <div class="alternatif">
+      Termasuk model lokal <span>Ollama</span><span>LM Studio</span><span>vLLM</span>
+    </div>
   </div>
 </section>
 
-<section class="bagian" id="unduh">
-  <div class="bungkus">
-    <div class="bagian-kepala muncul">
-      <p class="kecil-huruf">Unduh</p>
-      <h2>Windows 10 atau 11, 64-bit.</h2>
-      <p>Belum ada rilis macOS maupun Linux.</p>
+<!-- ===================== UNDUH ===================== -->
+<section class="panel panel-2" id="unduh">
+  <div class="dalam">
+    <div class="alur" aria-hidden="true">
+      <i class="simpul a"></i><i class="simpul c"></i>
+      <span class="lentera"><svg viewBox="0 0 24 30" fill="none" stroke="#6fd9ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1.5v2.6"/><path d="M8 5.2h8l-1.1 1.8H9.1z"/><rect x="7.4" y="7.4" width="9.2" height="13.4" rx="2.4"/><path d="M9.2 21h5.6l1.2 2.6H8z"/><ellipse cx="12" cy="14.1" rx="2" ry="2.9" fill="#ffc47a" stroke="none"><animate attributeName="opacity" values=".72;1;.72" dur="3.6s" repeatCount="indefinite"/></ellipse></svg></span>
+    </div>
+
+    <div class="teks">
+      <span class="pil">Unduh</span>
+      <h2>Windows 10 / 11, 64-bit</h2>
+      <p>Belum ada rilis macOS maupun Linux. 149 MB, tanpa akun, tanpa telemetri.</p>
     </div>
 
     <div class="petak">
-      <div class="kartu muncul">
-        <div class="kartu-atas">
-          <h3>Installer</h3>
-          <span class="kartu-ikon" style="--w:var(--sian)" aria-hidden="true">⤓</span>
-        </div>
+      <div class="kartu kartu-tin">
+        <span class="pil pil-hijau">Disarankan</span>
+        <p class="jdl">Installer</p>
         <p>
-          Memasang ke folder pilihanmu, membuat shortcut, dan menimpa versi lama saat
-          kamu memperbarui. Pengaturan dan riwayat percakapan tetap aman.
+          Memasang ke folder pilihanmu, membuat shortcut, dan menimpa versi lama
+          saat kamu memperbarui. Pengaturan dan riwayat percakapan tetap aman.
         </p>
-        <a class="tombol tombol-utama tombol-penuh" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Setup.exe">
-          Unduh installer
-        </a>
+        <a class="tombol tombol-utama tombol-penuh" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Setup.exe">Unduh installer</a>
       </div>
-      <div class="kartu muncul">
-        <div class="kartu-atas">
-          <h3>Portable</h3>
-          <span class="kartu-ikon" style="--w:var(--samar)" aria-hidden="true">▤</span>
-        </div>
+      <div class="kartu">
+        <span class="pil">Tanpa pemasangan</span>
+        <p class="jdl">Portable</p>
         <p>
-          Satu berkas, tanpa pemasangan. Cocok untuk mencoba dulu. Pengaturan tetap
+          Satu berkas, langsung jalan. Cocok untuk mencoba dulu. Pengaturan tetap
           tersimpan di <code>%APPDATA%</code>.
         </p>
-        <a class="tombol tombol-sunyi tombol-penuh" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Portable.exe">
-          Unduh portable
-        </a>
+        <a class="tombol tombol-sunyi tombol-penuh" href="https://github.com/sinichi-edogawa/belmont/releases/download/windows-latest/Belmont-Tools-Portable.exe">Unduh portable</a>
       </div>
     </div>
 
-    <div class="catatan awas muncul">
-      <div class="catatan-isi">
-        <p class="catatan-judul">Windows akan memperingatkanmu</p>
+    <div class="awas" style="margin:16px 0 0 140px">
+      <div class="pita"></div>
+      <div class="isi">
+        <h3>Windows akan memperingatkanmu</h3>
         <p>
           Berkasnya belum ditandatangani secara digital, jadi SmartScreen menampilkan
           &ldquo;Windows protected your PC&rdquo;. Klik <strong>More info</strong> lalu
@@ -354,37 +341,20 @@
   </div>
 </section>
 
-<section class="bagian" id="panduan">
-  <div class="bungkus">
-    <div class="bagian-kepala muncul">
-      <p class="kecil-huruf">Panduan</p>
-      <h2>Mulai dari sini.</h2>
+<!-- ===================== PANDUAN ===================== -->
+<section class="panel" id="panduan">
+  <div class="dalam">
+    <div class="teks" style="margin-left:0">
+      <span class="pil">Panduan</span>
+      <h2>Mulai dari sini</h2>
     </div>
-    <div class="petak">
-      <a class="kartu muncul" href="panduan/pasang.html">
-        <div class="kartu-judul"><h3>Pemasangan</h3><span class="panah" aria-hidden="true">→</span></div>
-        <p>Unduh, pasang, lewati peringatan Windows, atur folder kerja pertamamu.</p>
-      </a>
-      <a class="kartu muncul" href="panduan/provider.html">
-        <div class="kartu-judul"><h3>Penyedia &amp; kunci API</h3><span class="panah" aria-hidden="true">→</span></div>
-        <p>Login akun Claude atau tempel kunci API, lalu pilih modelnya.</p>
-      </a>
-      <a class="kartu muncul" href="panduan/pengaturan.html">
-        <div class="kartu-judul"><h3>Pengaturan</h3><span class="panah" aria-hidden="true">→</span></div>
-        <p>Setiap opsi dijelaskan, termasuk yang hanya bisa diubah dari berkas.</p>
-      </a>
-      <a class="kartu muncul" href="panduan/subagent.html">
-        <div class="kartu-judul"><h3>Subagen &amp; tugas latar</h3><span class="panah" aria-hidden="true">→</span></div>
-        <p>Menjalankan banyak agen sekaligus dan membaca indikatornya.</p>
-      </a>
-      <a class="kartu muncul" href="panduan/telegram.html">
-        <div class="kartu-judul"><h3>Telegram</h3><span class="panah" aria-hidden="true">→</span></div>
-        <p>Mengendalikan agen dari HP, beserta batasan dan risikonya.</p>
-      </a>
-      <a class="kartu muncul" href="panduan/bangun.html">
-        <div class="kartu-judul"><h3>Jalankan dari sumber</h3><span class="panah" aria-hidden="true">→</span></div>
-        <p>Untuk yang ingin memodifikasi atau membangun installer sendiri.</p>
-      </a>
+    <div class="petak petak-3" style="margin-left:0">
+      <a class="kartu" href="panduan/pasang.html"><div class="kartu-judul"><h3>Pemasangan</h3><span class="panah">→</span></div><p>Unduh, pasang, lewati peringatan Windows, atur folder kerja pertamamu.</p></a>
+      <a class="kartu" href="panduan/provider.html"><div class="kartu-judul"><h3>Penyedia &amp; kunci API</h3><span class="panah">→</span></div><p>Login akun Claude atau tempel kunci API, lalu pilih modelnya.</p></a>
+      <a class="kartu" href="panduan/pengaturan.html"><div class="kartu-judul"><h3>Pengaturan</h3><span class="panah">→</span></div><p>Setiap opsi dijelaskan, termasuk yang hanya bisa diubah dari berkas.</p></a>
+      <a class="kartu" href="panduan/subagent.html"><div class="kartu-judul"><h3>Subagen &amp; tugas latar</h3><span class="panah">→</span></div><p>Menjalankan banyak agen sekaligus dan membaca indikatornya.</p></a>
+      <a class="kartu" href="panduan/telegram.html"><div class="kartu-judul"><h3>Telegram</h3><span class="panah">→</span></div><p>Mengendalikan agen dari HP, beserta batasan dan risikonya.</p></a>
+      <a class="kartu" href="panduan/bangun.html"><div class="kartu-judul"><h3>Jalankan dari sumber</h3><span class="panah">→</span></div><p>Untuk yang ingin memodifikasi atau membangun installer sendiri.</p></a>
     </div>
   </div>
 </section>
@@ -395,45 +365,46 @@
   <div class="bungkus">
     <div class="kaki-petak">
       <div class="kaki-kolom">
-        <a class="merek" href="index.html" style="margin-bottom:14px">
+        <a class="merek" href="index.html">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#6fd9ae"/><path fill="#0a0a0d" fill-rule="evenodd" d="M24 20H52a15 15 0 010 30H24Zm0 30h30a15 15 0 010 30H24Zm14-20h11a5 5 0 010 10H38Zm0 30h13a5 5 0 010 10H38Z"/></svg>
           <span class="merek-teks"><b>Belmont Tools</b></span>
         </a>
         <p>
           Agen AI desktop yang berjalan di komputermu sendiri, dengan akun dan kunci
           API milikmu. Tanpa server perantara, tanpa telemetri.
         </p>
-        <span class="kaki-status"><span class="titik"></span> Rilis stabil 0.4.16</span>
+        <span class="kaki-status">rilis stabil 0.4.17</span>
       </div>
 
       <div class="kaki-kolom">
         <h4>Produk</h4>
-        <a href="#fitur">Fitur</a>
-        <a href="#penyedia">Penyedia AI</a>
-        <a href="#unduh">Unduh</a>
-        <a href="https://github.com/sinichi-edogawa/belmont/releases">Riwayat rilis</a>
+        <a class="k" href="#fitur">Fitur</a>
+        <a class="k" href="#penyedia">Penyedia AI</a>
+        <a class="k" href="#unduh">Unduh</a>
+        <a class="k" href="https://github.com/sinichi-edogawa/belmont/releases">Riwayat rilis</a>
       </div>
 
       <div class="kaki-kolom">
         <h4>Panduan</h4>
-        <a href="panduan/pasang.html">Pemasangan</a>
-        <a href="panduan/pengaturan.html">Pengaturan</a>
-        <a href="panduan/subagent.html">Subagen</a>
-        <a href="panduan/telegram.html">Telegram</a>
+        <a class="k" href="panduan/pasang.html">Pemasangan</a>
+        <a class="k" href="panduan/pengaturan.html">Pengaturan</a>
+        <a class="k" href="panduan/subagent.html">Subagen</a>
+        <a class="k" href="panduan/telegram.html">Telegram</a>
       </div>
 
       <div class="kaki-kolom">
         <h4>Sumber</h4>
-        <a href="https://github.com/sinichi-edogawa/belmont">Repo GitHub</a>
-        <a href="panduan/bangun.html">Bangun dari sumber</a>
-        <p style="margin-top:14px">
-          Dirilis di bawah Lisensi MIT.
-        </p>
+        <a class="k" href="https://github.com/sinichi-edogawa/belmont">Repo GitHub</a>
+        <a class="k" href="panduan/bangun.html">Bangun dari sumber</a>
       </div>
     </div>
 
+    <div class="kaki-bawah">
+      <span>Lisensi MIT · v0.4.17</span>
+      <span>agentharness.my.id</span>
+    </div>
   </div>
 </footer>
 
-<script src="aset/gerak.js" defer></script>
 </body>
 </html>
